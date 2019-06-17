@@ -11,12 +11,18 @@
       <li id="home" class="nav-item active">
         <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li id="training" class="nav-item">
-        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}/training/">Training<span></a>
+      {% for link in site.nav_links %}
+      {% if link.jump_link == false  %}
+      <li id="{{ link.location | downcase | replace: ' ', '-'  }}" class="nav-item">
+        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}{{ link.location | downcase | replace: ' ', '-'  }}/">{{ link.location }}<span></a>
       </li>
-      <li id="career-services" class="nav-item">
-        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}/career-services/">Career Services<span></a>
+      {% endif %}
+      {% if link.jump_link == true  %}
+      <li id="{{ link.location | downcase | replace: ' ', '-'  }}-link" class="nav-item">
+        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}/#{{ link.location }}">{{ link.location }}<span></a>
       </li>
+      {% endif %}
+      {% endfor %}
     </ul>
   </div>
 </nav>

@@ -2,10 +2,18 @@ title: "Kankakee Community College"
 public-url: "https://continuinged.kcc.edu"
 theme: "kcc-gem-theme"
 google-tag_key: Google Tag Manager key goes here
+nav_links:
+  - location: Training
+    jump_link: false
+  - location: Career Services
+    jump_link: false
+  - location: Facilities
+    jump_link: false
+  - location: About
+    jump_link: false
+  - location: Contact
+    jump_link: true
 collections:
-  posts:
-    output: false
-    _hide_content: true
 defaults:
 - scope:
     path: ''
