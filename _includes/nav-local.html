@@ -12,7 +12,7 @@
         <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}">Home <span class="sr-only">(current)</span></a>
       </li>
       {% for link in site.nav_links %}
-      {% if link.jump_link == false  %}
+      {% if link.jump_link == false and link.button == false  %}
       <li id="{{ link.location | downcase | replace: ' ', '-'  }}" class="nav-item">
         <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}{{ link.location | downcase | replace: ' ', '-'  }}/">{{ link.location }}<span></a>
       </li>
@@ -20,6 +20,11 @@
       {% if link.jump_link == true  %}
       <li id="{{ link.location | downcase | replace: ' ', '-'  }}-link" class="nav-item">
         <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}/#{{ link.location }}">{{ link.location }}<span></a>
+      </li>
+      {% endif %}
+      {% if link.button == true %}
+      <li id="{{ link.location | downcase | replace: ' ', '-'  }}-link" class="nav-item">
+        <a href="#" class="btn btn-primary typography__nav-link">{{ link.location }}</a>
       </li>
       {% endif %}
       {% endfor %}

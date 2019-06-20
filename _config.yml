@@ -4,16 +4,26 @@ theme: "kcc-gem-theme"
 google-tag_key: Google Tag Manager key goes here
 nav_links:
   - location: Training
+    button: false
     jump_link: false
   - location: Career Services
+    button: false
     jump_link: false
   - location: Facilities
+    button: false
     jump_link: false
   - location: About
+    button: false
     jump_link: false
   - location: Contact
+    button: false
     jump_link: true
+  - location: Register
+    button: true
+    jump_link: false
 collections:
+  announcements:
+    output: false
 defaults:
 - scope:
     path: ''
