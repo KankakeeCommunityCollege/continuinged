@@ -1,19 +1,75 @@
 ---
-layout: default
+layout: sub-nav
 baseurl: ../
 title: Training
 description: ''
+trainings:
+  - name: Computer Skills
+    link: #
+    image: assets/img/kcc-placeholder.png
+    caption: Computer Skills
+    alt: Computer skills at KCC
+    descrition: A wonderfull description about this wonderfull course.
+  - name: Professional Development
+    link: #
+    image: assets/img/kcc-placeholder.png
+    caption: Professional Development
+    alt: Professional development at KCC
+    descrition: A wonderfull description about this wonderfull course.
+  - name: Personal Enrichment
+    link: #
+    image: assets/img/kcc-placeholder.png
+    caption: Personal Enrichment
+    alt: Personal enrichment at KCC
+    descrition: A wonderfull description about this wonderfull course.
+  - name: Lifelong Learning Institute
+    link: #
+    image: assets/img/kcc-placeholder.png
+    caption: Lifelong Learning Institute
+    alt: Lifelong Learning Institute at KCC
+    descrition: A wonderfull description about this wonderfull course.
+  - name: Career Services
+    link: #
+    image: assets/img/kcc-placeholder.png
+    caption: Career Services
+    alt: Career services at KCC
+    descrition: A wonderfull description about this wonderfull course.
+  - name: Highway Construction
+    link: #
+    image: assets/img/kcc-placeholder.png
+    caption: Highway Construction
+    alt: Highway construction at KCC
+    descrition: A wonderfull description about this wonderfull course.
+  - name: Driver Improvement Program
+    link: #
+    image: assets/img/kcc-placeholder.png
+    caption: Driver Improvement Program
+    alt: Driver improvement program at KCC
+    descrition: A wonderfull description about this wonderfull course.
 ---
 
 <!-- Build -->
-<main class="position__offset-fixed-nav">
+<main class="sub-nav__content--wrapper mt-3">
   <div class="container">
-    <div class="row">
-      <div class="col">
+    {% for course in page.trainings %}
+    <div class="row mb-3">
+      <div class="col-md-4 img-hover__img-wrapper">
+        <a class="img-hover__img-link" href="{{ course.link }}">
+          <div class="img-hover__thumb-caption">
+            {{ course.caption }}
+          </div>
+          <div class="img-hover__hover img-hover__hover--inverse">
+          </div>
+          <img class="img-fluid img-hover__img-ease editable" src="{{ page.baseurl }}{{ course.image }}" alt="{{ course.alt }}" />
+        </a>
+      </div>
+      <div class="col-md-8 mt-1">
         <div class="editable">
-  
+          <p><strong>{{ course.name }}</strong> {{ course.descrition }}</p>
+          <p><a class="btn btn-primary" href="{{ course.link }}">Learn More</a></p>
         </div>
       </div>
     </div>
+    {% endfor %}
   </div>
 </main>

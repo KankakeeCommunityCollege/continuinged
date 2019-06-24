@@ -1,18 +1,74 @@
 ---
-layout: default
+layout: sub-nav
 baseurl: ../
 title: Career Services
 description: ''
 ---
 
 <!-- Build -->
-<main class="position__offset-fixed-nav">
+<main class="sub-nav__content--wrapper mt-3">
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="editable">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="career-preparation-tab" data-toggle="tab" href="#career-preparation" role="tab" aria-controls="career-preparation" aria-selected="true">Career Preparation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="employers-tab" data-toggle="tab" href="#employers" role="tab" aria-controls="employers" aria-selected="false">Employers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="jobs-tab" data-toggle="tab" href="#jobs" role="tab" aria-controls="jobs" aria-selected="false">Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="job-fairs-tab" data-toggle="tab" href="#job-fairs" role="tab" aria-controls="job-fairs" aria-selected="false">Job Fairs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="internships-tab" data-toggle="tab" href="#internships" role="tab" aria-controls="internships" aria-selected="false">Internships</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="career-planning-tab" data-toggle="tab" href="#career-planning" role="tab" aria-controls="career-planning" aria-selected="false">Career Planning</a>
+          </li>
+        </ul>
 
-        </div>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade mt-3 show active" id="career-preparation" role="tabpanel" aria-labelledby="career-preparation-tab">
+              <h3 class="typography__h3 editable">Career Preparation</h3>
+              <div class="editable">
+                <p>Career prep content.</p>
+              </div>
+            </div>
+            <div class="tab-pane fade mt-3" id="employers" role="tabpanel" aria-labelledby="employers-tab">
+              <h3 class="typography__h3 editable">Employers</h3>
+              <div class="editable">
+                <p>Employers content.</p>
+              </div>
+            </div>
+            <div class="tab-pane fade mt-3" id="jobs" role="tabpanel" aria-labelledby="jobs-tab">
+              <h3 class="typography__h3 editable">Jobs</h3>
+              <div class="editable">
+                <p>Jobs content.</p>
+              </div>
+            </div>
+            <div class="tab-pane fade mt-3" id="job-fairs" role="tabpanel" aria-labelledby="job-fairs-tab">
+              <h3 class="typography__h3 editable">Job Fairs</h3>
+              <div class="editable">
+                <p>Job fair content.</p>
+              </div>
+            </div>
+            <div class="tab-pane fade mt-3" id="internships" role="tabpanel" aria-labelledby="internships-tab">
+              <h3 class="typography__h3 editable">Internships</h3>
+              <div class="editable">
+                <p>Internships content.</p>
+              </div>
+            </div>
+            <div class="tab-pane fade mt-3" id="career-preparation" role="tabpanel" aria-labelledby="career-preparation-tab">
+              <h3 class="typography__h3 editable">Career Preparations</h3>
+              <div class="editable">
+                <p>Career preparation content.</p>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </div>
