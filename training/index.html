@@ -10,42 +10,49 @@ trainings:
     caption: Computer Skills
     alt: Computer skills at KCC
     descrition: A wonderfull description about this wonderfull course.
+    button_text: Learn More
   - name: Professional Development
     link: #
     image: assets/img/kcc-placeholder.png
     caption: Professional Development
     alt: Professional development at KCC
     descrition: A wonderfull description about this wonderfull course.
+    button_text: Learn More
   - name: Personal Enrichment
     link: #
     image: assets/img/kcc-placeholder.png
     caption: Personal Enrichment
     alt: Personal enrichment at KCC
     descrition: A wonderfull description about this wonderfull course.
+    button_text: Learn More
   - name: Lifelong Learning Institute
     link: #
     image: assets/img/kcc-placeholder.png
     caption: Lifelong Learning Institute
     alt: Lifelong Learning Institute at KCC
     descrition: A wonderfull description about this wonderfull course.
+    button_text: Learn More
   - name: Career Services
     link: #
     image: assets/img/kcc-placeholder.png
     caption: Career Services
     alt: Career services at KCC
     descrition: A wonderfull description about this wonderfull course.
+    button_text: Learn More
   - name: Highway Construction
     link: #
     image: assets/img/kcc-placeholder.png
     caption: Highway Construction
     alt: Highway construction at KCC
     descrition: A wonderfull description about this wonderfull course.
+    button_text: Learn More
   - name: Driver Improvement Program
     link: #
     image: assets/img/kcc-placeholder.png
     caption: Driver Improvement Program
     alt: Driver improvement program at KCC
     descrition: A wonderfull description about this wonderfull course.
+    button_text: Learn More
 ---
 
 <!-- Build -->
@@ -60,13 +67,13 @@ trainings:
           </div>
           <div class="img-hover__hover img-hover__hover--inverse">
           </div>
-          <img class="img-fluid img-hover__img-ease editable" src="{{ page.baseurl }}{{ course.image }}" alt="{{ course.alt }}" />
+          <img class="img-fluid img-hover__img-ease" src="{{ page.baseurl }}{{ course.image }}" alt="{{ course.alt }}" />
         </a>
       </div>
       <div class="col-md-8 mt-1">
-        <div class="editable">
+        <div>
           <p><strong>{{ course.name }}</strong> {{ course.descrition }}</p>
-          <p><a class="btn btn-primary" href="{{ course.link }}">Learn More</a></p>
+          <p><a class="btn btn-primary" href="{{ course.link }}">{{ course.button_text }}</a></p>
         </div>
       </div>
     </div>
