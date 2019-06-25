@@ -24,6 +24,8 @@ nav_links:
 collections:
   announcements:
     output: false
+  contacts:
+    output: false
 defaults:
 - scope:
     path: ''
