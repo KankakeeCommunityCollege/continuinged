@@ -6,6 +6,11 @@
         <h3 class="typography__section--heading margins__heading--btm">Contacts</h3>
       </div>
     </div>
+    <div class="row editor-link">
+      <div class="col editor-link mb-3">
+        <a href="cloudcannon:collections/_contacts/" class="btn btn-success editor-button">Edit Contacts</a>
+      </div>
+    </div>
     <div class="row">
       {% for contact in sorted_contacts %}
       {% assign contact_name = contact.name | split: " " %}
