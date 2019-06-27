@@ -1,6 +1,6 @@
 ---
 title: Example Announcement Title
-display_announcement: true
+display_announcement: false
 ---
 
 Example announcement text...
