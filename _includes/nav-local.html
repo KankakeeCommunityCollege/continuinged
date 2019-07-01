@@ -19,7 +19,7 @@
       {% endif %}
       {% if link.jump_link == true  %}
       <li id="{{ link.location | downcase | replace: ' ', '-'  }}-link" class="nav-item">
-        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}/#{{ link.location }}">{{ link.location }}<span></a>
+        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}/#{{ link.location | downcase }}">{{ link.location }}<span></a>
       </li>
       {% endif %}
       {% if link.button == true %}
