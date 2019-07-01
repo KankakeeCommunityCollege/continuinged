@@ -19,6 +19,7 @@ nav_links:
   - location: Contact
     button: false
     jump_link: true
+    external: https://www.enrole.com/kcc/jsp/login.jsp
   - location: Sign&nbsp;Up/Login
     button: true
     jump_link: false
