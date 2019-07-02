@@ -26,6 +26,7 @@ nav_links:
   - link_text: Sign&nbsp;Up/Login
     link_href: https://www.enrole.com/kcc/jsp/login.jsp
     button: true
+    external: true
 collections:
   announcements:
     output: false
