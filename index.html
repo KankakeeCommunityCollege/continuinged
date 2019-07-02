@@ -32,14 +32,14 @@ slides:
         <div>
           <a href="{{ slide.url }}"><img src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
           <div class="hero-slider__slider--heading-container text-center">
-            <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
+            <h3 class="hero-slider__heading--bold">{{slide.text}}</h3>
           </div>
         </div>
         {% else %}
         <div>
-          <a href="{{ slide.url }}"><img src="assets/img/placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
+          <a href="{{ slide.url }}"><img src="assets/img/kcc-placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
           <div class="hero-slider__slider--heading-container text-center">
-            <h3 class="hero-slider__slider--slide-heading">{{slide.text}}</h3>
+            <h3 class="hero-slider__heading--bold">{{slide.text}}</h3>
           </div>
         </div>
         {% endif %}
@@ -191,11 +191,11 @@ slides:
       </div>
     </div>
   </section>
-  <section>
+  <section class="mt-3">
     <div class="container">
       <div class="row">
         <div class="col">
-          <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF772088"><img src="{{ page.baseurl }}uploads/ed2go-banner-edits.jpg" alt="Online Courses Complete from your home or office at any time of the day or night." class="img-fluid img__full-width" /></a>
+          <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF772088"><img src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}uploads/ed2go-banner_updates.jpg" class="img-fluid img__full-width" alt="" /></a>
         </div>
       </div>
     </div>
