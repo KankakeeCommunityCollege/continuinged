@@ -5,25 +5,27 @@ url: "https://continuinged.kcc.edu"
 theme: "kcc-gem-theme"
 google-tag_key: Google Tag Manager key goes here
 nav_links:
-  - location: Training
+  - link_text: Home
+    link_href: ''
     button: false
-    jump_link: false
-  - location: Career Services
+  - link_text: Training
+    link_href: training
     button: false
-    jump_link: false
-  - location: Facilities
+  - link_text: Career Services
+    link_href: career-services
     button: false
-    jump_link: false
-  - location: About
+  - link_text: Facilities
+    link_href: facilities
     button: false
-    jump_link: false
-  - location: Contact
+  - link_text: About
+    link_href: about
     button: false
-    jump_link: true
-    external: https://www.enrole.com/kcc/jsp/login.jsp
-  - location: Sign&nbsp;Up/Login
+  - link_text: Contact
+    link_href: '#contact'
+    button: false
+  - link_text: Sign&nbsp;Up/Login
+    link_href: https://www.enrole.com/kcc/jsp/login.jsp
     button: true
-    jump_link: false
 collections:
   announcements:
     output: false
