@@ -1,38 +1,35 @@
 {% comment %}
   TODO:
-  Cleanup more classes.
-  Add a class for targeting nav-items w/ JS.
-  Write JS to AUTOMATE to handle:
-  - highlighting the current page in the navbar
-  - sr-only (current) span
-  Lastly, copy this file back into kcc-gem-theme & kcc-startup-template!!
+    Lastly, copy this file back into kcc-gem-theme & kcc-startup-template!!
+  DONE:
+    Cleanup more classes.
+    Add a class for targeting nav-items w/ JS.
+{% endcomment %}
+{% comment %}
+  TODO for kcc-gem-theme:
+  - Copy continuinged's cleaned-up '_links.scss' into the theme & startup-template.
+  - Copy '_includes/nav-local.html' into the theme & startup-template.
+  - Add site.site_name to all repos _config.yml's
+  - Switch all repos to build navigation from _config.yml
+  - CHECK OTHER SITES USING TEMPLATE FOR BREAKING CHANGES FROM THE ABOVE.
 {% endcomment %}
 <nav id="mainNav" role="navigation" class="navbar navbar-expand-lg navbar-light bg-light local-nav fixed-top navbar-fixed-top">
   <a href="{{ page.baseurl }}" class="links__no-underline navbar-brand">
-    <h1 class="typography__nav-heading">Continuing Education</h1>
+    <h1 class="typography__nav-heading">{{ site.site_name }}</h1>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavContent" aria-controls="mainNavContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="mainNavContent">
-    <ul class="navbar-nav ml-auto">
-      <li id="home" class="nav-item active">
-        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}">Home <span class="sr-only">(current)</span></a>
-      </li>
+    <ul class="js-nav navbar-nav ml-auto">
       {% for link in site.nav_links %}
-      {% if link.jump_link == false and link.button == false  %}
-      <li id="{{ link.location | downcase | replace: ' ', '-'  }}" class="nav-item">
-        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}{{ link.location | downcase | replace: ' ', '-'  }}/">{{ link.location }}</a>
+      {% if link.button == false  %}
+      <li class="js-nav-item nav-item">
+        <a class="nav-link links__nav-link--color typography__nav-link" href="{{page.baseurl}}{{ link.link_href }}">{{ link.link_text }}</a>
       </li>
-      {% endif %}
-      {% if link.jump_link == true  %}
-      <li id="{{ link.location | downcase | replace: ' ', '-'  }}-link" class="nav-item">
-        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}/#{{ link.location | downcase }}">{{ link.location }}</a>
-      </li>
-      {% endif %}
-      {% if link.button == true %}
-      <li id="{{ link.location | downcase | replace: ' ', '-'  }}-link" class="nav-item">
-        <a href="https://www.enrole.com/kcc/jsp/login.jsp" class="btn btn-primary typography__nav-link">{{ link.location }}</a>
+      {% else %}
+      <li class="js-nav-item nav-item">
+        <a href="{{page.baseurl}}{{ link.link_href }}" class="btn btn-primary typography__nav-link">{{ link.link_text }}</a>
       </li>
       {% endif %}
       {% endfor %}
