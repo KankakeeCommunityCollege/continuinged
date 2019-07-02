@@ -1,12 +1,20 @@
+{% comment %}
+  TODO:
+  Cleanup more classes.
+  Add a class for targeting nav-items w/ JS.
+  Write JS to AUTOMATE to handle:
+  - highlighting the current page in the navbar
+  - sr-only (current) span
+  Lastly, copy this file back into kcc-gem-theme & kcc-startup-template!!
+{% endcomment %}
 <nav id="mainNav" role="navigation" class="navbar navbar-expand-lg navbar-light bg-light local-nav fixed-top navbar-fixed-top">
-  <a href="{{ page.baseurl }}" class="links__local-nav__newsroom-heading-link typography__newsroom-heading navbar-brand">
+  <a href="{{ page.baseurl }}" class="links__no-underline navbar-brand">
     <h1 class="typography__nav-heading">Continuing Education</h1>
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavContent" aria-controls="mainNavContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="mainNavContent">
     <ul class="navbar-nav ml-auto">
       <li id="home" class="nav-item active">
         <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}">Home <span class="sr-only">(current)</span></a>
@@ -14,12 +22,12 @@
       {% for link in site.nav_links %}
       {% if link.jump_link == false and link.button == false  %}
       <li id="{{ link.location | downcase | replace: ' ', '-'  }}" class="nav-item">
-        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}{{ link.location | downcase | replace: ' ', '-'  }}/">{{ link.location }}<span></a>
+        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}{{ link.location | downcase | replace: ' ', '-'  }}/">{{ link.location }}</a>
       </li>
       {% endif %}
       {% if link.jump_link == true  %}
       <li id="{{ link.location | downcase | replace: ' ', '-'  }}-link" class="nav-item">
-        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}/#{{ link.location | downcase }}">{{ link.location }}<span></a>
+        <a class="nav-link links__local-nav__nav-link--color typography__nav-link" href="{{page.baseurl}}/#{{ link.location | downcase }}">{{ link.location }}</a>
       </li>
       {% endif %}
       {% if link.button == true %}
