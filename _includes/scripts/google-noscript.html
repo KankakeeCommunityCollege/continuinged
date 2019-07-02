@@ -1,6 +1,13 @@
     <!-- Google Tag Manager (noscript) -->
+    {% if jekyll.environment == "publish" %}
     {% if site.google-tag_key == "Google Tag Manager key goes here" or site.google-tag_key == nil or site.google-tag_key == '' %}<!-- =========================================================================================
-    YOU NEED TO PUT THE GOOGLE TAG KEY IN THE _config.yml FILE FOR THE <noscript> TO SHOW UP HERE!
-    ============================================================================================ -->{% endif %}
-    {% if site.google-tag_key != "Google Tag Manager key goes here" and site.google-tag_key != nil %}<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google-tag_key }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>{% endif %}
+      YOU NEED TO PUT THE GOOGLE TAG KEY IN THE _config.yml FILE FOR THE <script> TO SHOW UP HERE!
+      ============================================================================================ -->{% endif %}{% endif %}
+    {% if site.google-tag_key != "Google Tag Manager key goes here" and site.google-tag_key != nil and jekyll.environment != publish %}<!-- =========================================================================================
+      GOOGLE TAG CODE will only show up if `jekyll.envrionment == publish` (only on the cloudcannon FTP site)
+      if you ALREADY ENTERED THE GOOGLE TAG KEY in config.yml and it's still not showing on the live site...
+      your jekyll.envrionment (FTP site's settings) is probably set to `production` and not `publish`
+      IF YOU ARE ON LOCALHOST:#### IT WILL NOT SHOW UP AT ALL
+      ============================================================================================ -->{% endif %}
+    {% if site.google-tag_key != "Google Tag Manager key goes here" and site.google-tag_key != nil and jekyll.environment == publish %}<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google-tag_key }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>{% endif %}
     <!-- End Google Tag Manager (noscript) -->
