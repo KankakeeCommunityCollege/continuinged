@@ -35,21 +35,11 @@ _site
 # Ignore node modules
 node_modules/
 
-# Ignore gem lock to avoid mac/windows discrepencies
+# Ignore npm lock file to avoid mac/windows/linux discrepancies
+package-lock.json
+
+# Ignore gem lock to avoid mac/windows/linux discrepancies
 Gemfile.lock
-
-# Ignore adobe directory containing working illustrator, photoshop,
-assets/adobe/
-assets/adobe/*
-/adobe/
-adobe/*
-
-# Yarn error log
-yarn-error.log
-
-# Ye Olde Gulp tasks from an API long, long ago, in a galaxy far, far away:
-old-gulp-tasks/
-old.gulpfile.js
 
 # Jekyll 4.0.0's new cache dir
 .jekyll-cache/
