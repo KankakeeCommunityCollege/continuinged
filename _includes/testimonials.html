@@ -1,0 +1,23 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col margins__col--top section__heading-underline">
+        <h3 class="typography__section--heading margins__heading--btm">{{ page.student_testimonials }}</h3>
+      </div>
+    </div>
+    <div class="row">
+      {% assign sorted_testimonials = site.testimonials | sort: 'order' %}
+      {% for testimony in sorted_testimonials %}
+        <div class="col-md-6 d-flex flex-column mb-3">
+          <div class="d-flex align-items-center justify-content-center">
+            {% if testimony.portrait %}<img src="{{ testimony.portrait }}" class="testimonials__img--round" alt="{{ testimony.name }}">{% endif %}
+            <div>
+              <h3 class="typography__testimonials--quote">{{ testimony.quote }}</h3>
+              <h3 class="testimonials__heading--overline testimonials__name--color typography__testimonials--name notranslate">&nbsp;-&nbsp;{{ testimony.name }}</h3>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
