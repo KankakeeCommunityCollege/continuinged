@@ -32,6 +32,8 @@ collections:
     output: false
   contacts:
     output: false
+  testimonials:
+    output: false
 defaults:
 - scope:
     path: ''
