@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       {% assign sorted_testimonials = site.testimonials | sort: 'order' %}
-      {% for testimony in sorted_testimonials %}
+      {% for testimony in sorted_testimonials limit: 2 %}
         <div class="col-md-6 d-flex flex-column mb-3">
           <div class="d-flex align-items-center justify-content-center">
             {% if testimony.portrait %}<img src="{{ testimony.portrait }}" class="testimonials__img--round" alt="{{ testimony.name }}">{% endif %}
