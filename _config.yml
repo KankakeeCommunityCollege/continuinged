@@ -3,6 +3,7 @@ site_name: Continuing Education
 public-url: "https://continuinged.kcc.edu"
 url: "https://continuinged.kcc.edu"
 theme: "kcc-gem-theme"
+emergency_alert: true
 google-tag_key: GTM-K5WFF74
 nav_config:
   smaller_brand: true
