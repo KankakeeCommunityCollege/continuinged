@@ -18,13 +18,14 @@ slides:
     url: ' https://www.ed2go.com/kankakeecc/'
     text:
   - image: uploads/slider_library-group.jpg
-    alt-text: Learn It Today.<br>Use It Tomorrow.
+    alt-text: Learn It Today. Use It Tomorrow.
     url: 'https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0'
     text: Learn It Today. Use It Tomorrow.
   - image: uploads/slider_lmi.jpg
     alt-text: Professional Development
     url: 'https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0'
     text:
+    white_background: true
   - image: uploads/slider_man-and-woman.jpg
     alt-text: Career Services
     url: 'https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7C25B0'
@@ -34,27 +35,7 @@ slides:
 <!-- Build -->
 <main>
   <div class="container">
-    <div class="row">
-      <div class="col-md-12 hero-slider__slider">
-      {% for slide in page.slides %}
-        {% if forloop.first == true %}
-        <div>
-          <a href="{{ slide.url }}"><img src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
-          <div class="hero-slider__slider--heading-container text-center">
-            <h3 class="hero-slider__heading--bold">{{slide.text}}</h3>
-          </div>
-        </div>
-        {% else %}
-        <div>
-          <a href="{{ slide.url }}"><img src="assets/img/kcc-placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid hero-slider__slider--slide-img" alt="{{slide.alt-text}}" /></a>
-          <div class="hero-slider__slider--heading-container text-center">
-            <h3 class="hero-slider__heading--bold">{{slide.text}}</h3>
-          </div>
-        </div>
-        {% endif %}
-      {% endfor %}
-      </div>
-    </div>
+    {% include hero-slider.html %}
   </div>
   <section class="mt-3">
     {% for announcement in site.announcements %}
