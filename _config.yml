@@ -4,6 +4,7 @@ public-url: "https://continuinged.kcc.edu"
 url: "https://continuinged.kcc.edu"
 theme: "kcc-gem-theme"
 google-tag_key: GTM-K5WFF74
+# BUILD
 nav_config:
   smaller_brand: true
 nav_links:
