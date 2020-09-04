@@ -10,7 +10,7 @@ function removeAttributes(el, attArr) {
   return el;
 }
 
-function injectJotformScript() {
+function hideJotformModalAfterLoad() {
 
   if (!document.getElementById(FORM_MODAL_ID) || !document.getElementById(MODAL_BUTTON_ID) ) // Check for required element
     return;
@@ -22,7 +22,7 @@ function injectJotformScript() {
     modal.classList.remove('show');
     removeAttributes(modal, ['aria-modal', 'style']);
     removeAttributes(button, ['disabled']);
-  }, 2000); // This gives us 2 seconds to load the script before hididng it completely
+  }, 2500); // This gives us 2 seconds to load the script before hididng it completely
 }
 
-export default injectJotformScript;
+export default hideJotformModalAfterLoad;

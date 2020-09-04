@@ -1,7 +1,7 @@
 //import contactLink from './contactLink.js';
-import injectJotformScript from './injectJotformScript.js';
+import hideJotformModalAfterLoad from './hideJotformModal.js';
 
 //contactLink();
 document.addEventListener('DOMContentLoaded', function() {
-  injectJotformScript();
+  hideJotformModalAfterLoad();
 });
