@@ -1,4 +1,4 @@
-//import contactLink from './contactLink.js';
+import '../../scss/main.scss';
 import hideJotformModalAfterLoad from './hideJotformModal.js';
 import makeTabsLinkable from './tabLink.js';
 
