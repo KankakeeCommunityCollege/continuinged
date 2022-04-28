@@ -4,6 +4,7 @@ public-url: "https://continuinged.kcc.edu"
 url: "https://continuinged.kcc.edu"
 theme: "kcc-gem-theme"
 port: 3000
+timezone: America/Chicago
 google-tag_key: GTM-K5WFF74
 nav_config:
   smaller_brand: true
@@ -34,16 +35,6 @@ collections:
     output: false
   testimonials:
     output: false
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: post
-    title: ''
-    permalink: /:categories/:title/
-    baseurl: ../../../
-    categories: news
 permalink: pretty
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
