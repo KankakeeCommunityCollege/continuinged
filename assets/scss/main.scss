@@ -6,6 +6,7 @@
 @import '1-base/links';
 @import '1-base/buttons';
 @import '1-base/img';
+@import '1-base/iframe';
 
 // Modular components
 @import '2-modules/header';
@@ -16,6 +17,7 @@
 @import '2-modules/action-cards';
 @import '2-modules/testimonials';
 @import '2-modules/hero-slider';
+@import '2-modules/loader';
 
 // Layout items
 // @import "3-layout/...";
