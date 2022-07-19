@@ -11,10 +11,6 @@ function removeAttributes(el, attArr) {
 }
 
 function hideJotformModalAfterLoad() {
-
-  if (!document.getElementById(FORM_MODAL_ID) || !document.getElementById(MODAL_BUTTON_ID) ) // Check for required element
-    return;
-
   const modal = document.getElementById(FORM_MODAL_ID);
   const button = document.getElementById(MODAL_BUTTON_ID);
 
