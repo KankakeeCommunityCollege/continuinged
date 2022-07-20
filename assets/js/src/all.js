@@ -13,4 +13,7 @@ window.addEventListener('load', () => {
   if (document.querySelector('#registrationWrapper')) {
     import('./loadJotformOnModalOpen').then(({default: loadJotformOnModalOpen}) => loadJotformOnModalOpen())
   }
+  if (document.getElementById('attendingEmployers')) {
+    import('./createJobFairTable').then(({default: createJobFairTable}) => createJobFairTable())
+  }
 });
