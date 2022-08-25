@@ -36,3 +36,20 @@
   font-weight: 500;
   text-transform: uppercase;
 }
+
+// Heading styles used for information request
+//    landing-pages with Jotform embed (e.g. /career-services/request-info/)
+.typography__h2--request-info,
+.typography__h3--request-info {
+  color: $primary-blue;
+  font-family: $font-family-kcc;
+}
+
+.typography__h2--request-info {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.typography__h3--request-info {
+  font-size: 2.25rem;
+}
