@@ -6,6 +6,7 @@ description: >-
   Job seekers can find resume help, interview tips, job fairs & local job
   openings. Employers can partner to advertise jobs and use dedicated spaces for
   interviews.
+sheet_key: true
 ---
 {% comment %}
   TODO:
@@ -22,7 +23,10 @@ description: >-
       <div class="col">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="career-readiness-tab" data-toggle="tab" href="#career-readiness" role="tab" aria-controls="career-readiness" aria-selected="true">Career Readiness</a>
+            <a class="nav-link active" id="job-board-tab" data-toggle="tab" href="#job-board" role="tab" aria-controls="job-board" aria-selected="true">Job Board</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="career-readiness-tab" data-toggle="tab" href="#career-readiness" role="tab" aria-controls="career-readiness" aria-selected="false">Career Readiness</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="employers-tab" data-toggle="tab" href="#employers" role="tab" aria-controls="employers" aria-selected="false">Employers</a>
@@ -42,7 +46,38 @@ description: >-
         </ul>
 
           <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade mt-3 show active" id="career-readiness" role="tabpanel" aria-labelledby="career-readiness-tab">
+            <div class="tab-pane fade mt-3 show active" id="job-board" role="tabpanel" aria-labelledby="job-board-tab">
+              <p>
+                Welcome to our online job board! Below are job postings for the Kankakee County area. 
+                The most recent posts are at the top. A job postings will remain on the online job board for 30 days.
+                If you have questions regarding the job posting, please contact the employer directly.
+              </p>
+              <p class="mb-1">
+                <strong>Note:</strong> approved job postings will also display on the following pages:
+              </p>
+              <ul>
+                <li>
+                  WIOA homepage: <a href="https://wioa.kcc.edu/">wioa.kcc.edu/</a>
+                </li>
+                <li>
+                  WIOA Job Board page: <a href="https://wioa.kcc.edu/job-board/">wioa.kcc.edu/job-board/</a>
+                </li>
+              </ul>
+              <p>
+                Employers may post a free job posting by using our 
+                <!-- Button trigger for modal -->
+                <a href="{{ page.baseurl }}post-a-job-opening/" class="btn btn-primary">Post a Job Opening form</a>
+              </p>
+              <div id="JobBoard">
+                <div class="text-center">
+                  <img
+                    src="/assets/img/loader.min.svg"
+                    class="img-fluid loader loader--animate"
+                    alt="Loading...">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade mt-3" id="career-readiness" role="tabpanel" aria-labelledby="career-readiness-tab">
               <h2 class="typography__h2 editable">
                 Career Readiness
               </h2>
@@ -66,7 +101,7 @@ description: >-
                 <ul>
                   <li><a target="_blank" href="https://youtu.be/KW2GYa5KdJU">AIDA Cover Letters</a></li>
                   <li><a target="_blank" href=" https://youtu.be/VkUzqWhyuDg">Build a LinkedIn Profile That Attracts Employers</a></li>
-                  <li><a href="__notset__">5</a><a target="_blank" href=" https://youtu.be/T-hum5aIDvM"> Steps to a Winning Resume</a></li>
+                  <li><a target="_blank" href=" https://youtu.be/T-hum5aIDvM">5 Steps to a Winning Resume</a></li>
                   <li><a target="_blank" href="https://youtu.be/0JQ3MQF1enU">Tell Me About Yourself </a></li>
                 </ul>
               </div>

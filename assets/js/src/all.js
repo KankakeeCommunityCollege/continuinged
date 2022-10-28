@@ -16,4 +16,7 @@ window.addEventListener('load', () => {
   if (document.getElementById('attendingEmployers')) {
     import('./createJobFairTable').then(({default: createJobFairTable}) => createJobFairTable())
   }
+  if (document.getElementById('JobBoard')) {
+    import('./createJobBoard').then(({ default: createJobBoard }) => createJobBoard());
+  }
 });
