@@ -14,7 +14,15 @@ trainings:
     descrition: >-
       Get the skills to use your digital devices effectively at work and home.
       Many classes offer preparation for Microsoft Office Specialist
-      certification exams.
+      certification exams. 
+      <ul>
+        <li>NEW! <a href="https://www.enrole.com/kcc/jsp/course.jsp?courseId=STCP-9024&categoryId=BF6C5EA0">
+          CompTIA Information sessions</a></li>
+        <li>NEW! <a href="https://www.enrole.com/kcc/jsp/course.jsp?courseId=STCP-9015&categoryId=BF731560">
+          CompTIA IT Fundamentals course</a></li>
+        <li>NEW! <a href="https://www.enrole.com/kcc/jsp/course.jsp?courseId=NCRD-9158&categoryId=39325140">
+          Basic CompTIA A+ Certification Prep</a></li>
+      </ul>
     button_text: Learn More
   - name: Professional Development
     link: 'https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0'
@@ -33,8 +41,8 @@ trainings:
     caption: Personal Enrichment
     alt: Personal enrichment at KCC
     descrition: >-
-      Here’s where you can develop a hobby, meet people with similar interests,
-      and explore the latest trends. You’ll have a good time!
+      Here's where you can develop a hobby, meet people with similar interests,
+      and explore the latest trends. You'll have a good time!
     button_text: Learn More
   - name: Lifelong Learning Institute
     link: 'https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290'
@@ -42,7 +50,7 @@ trainings:
     caption: Lifelong Learning Institute
     alt: Lifelong Learning Institute at KCC
     descrition: >-
-      If you are age 50 or better, you’ll find stimulating intellectual and
+      If you are age 50 or better, you'll find stimulating intellectual and
       cultural pursuits in Lifelong Learning Institute classes. Courses are
       affordable, high-quality, and take place in an environment that fosters
       participation.
@@ -84,8 +92,8 @@ trainings:
 <main>
   <div class="container">
     {% for course in page.trainings %}
-    <div class="row mb-3">
-      <div class="col-md-4 img-hover__img-wrapper">
+    <div class="row mb-5">
+      <div class="col-md-4 img-hover__img-wrapper my-auto">
         <a class="img-hover__img-link" href="{{ course.link }}">
           <div class="img-hover__thumb-caption">
             {{ course.caption }}
@@ -97,8 +105,8 @@ trainings:
       </div>
       <div class="col-md-8 mt-1">
         <div>
-          <p><strong>{{ course.name }}</strong> {{ course.descrition }}</p>
-          <p><a class="btn btn-primary" href="{{ course.link }}">{{ course.button_text }}</a></p>
+          <p class="mb-1"><strong>{{ course.name }}</strong> {{ course.descrition }}</p>
+          <p class="mt-2"><a class="btn btn-primary" href="{{ course.link }}">{{ course.button_text }}</a></p>
         </div>
       </div>
     </div>
