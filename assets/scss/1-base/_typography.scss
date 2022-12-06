@@ -53,3 +53,26 @@
 .typography__h3--request-info {
   font-size: 2.25rem;
 }
+
+/*
+.typography__new-callout {
+  display: inline-block;
+  font-size: 90%;
+  font-weight: 900;
+  opacity: .85;
+  transform: rotate(-7.5deg);
+  &::after {
+    background-image: url('/assets/img/callout.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    content: ' ';
+    display: block;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    transform: scale(1.35, 1.2);
+    width: 100%;
+    z-index: -1;
+  }
+}
+*/
