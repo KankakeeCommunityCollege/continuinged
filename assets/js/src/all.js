@@ -19,4 +19,7 @@ window.addEventListener('load', () => {
   if (document.getElementById('JobBoard')) {
     import('./createJobBoard').then(({ default: createJobBoard }) => createJobBoard());
   }
+  if (document.querySelector('[data-target="#staticBackdrop"]')) {
+    import('./focusDmiModal').then(({ default: focusDmiModal }) => focusDmiModal());
+  }
 });
