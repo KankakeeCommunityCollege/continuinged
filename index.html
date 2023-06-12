@@ -34,18 +34,42 @@ slides:
     alt-text: Learn It Today. Use It Tomorrow.
     url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0
     text: Learn It Today. Use It Tomorrow.
+trainings:
+  - heading: Computer<br>Skills
+    image: uploads/computer-skills_square.jpg
+    image_alt: Young person using a laptop
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8
+    button_text: See Courses
+  - heading: CompTIA
+    image: uploads/comptia-server.jpg
+    image_alt: CompTIA Authorized Partner
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=781FE6F0
+    button_text: See Courses
+  - heading: Digital&nbsp;Marketing Professional&nbsp;Certification
+    image: uploads/dmi-brochure-image.jpg
+    image_alt: Person with the DMI (Digital Marketing Institute) logo in the background
+    url: ./digital-marketing
+    button_text: Learn More
+  - heading: Professional<br>Development
+    image: uploads/professional-development_square.jpg
+    image_alt: Smiling professional
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0
+    button_text: See Courses
+  - heading: Personal<br>Enrichment
+    image: uploads/personal-enrichement_square.jpg
+    image_alt: Person with an acoustic guitar
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808
+    button_text: See Courses
+  - heading: Lifelong Learning<br>Institute
+    image: uploads/lli-square.jpg
+    image_alt: Four people at an LLI event
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290
+    button_text: See Courses
 ---
 <main>
   <div class="container">
     {% include hero-slider.html %}
   </div>
-  <section class="mt-3">
-    {% for announcement in site.announcements %}
-      {% if announcement.display_announcement == true %}
-        {% include announcement.html %}
-      {% endif %}
-    {% endfor %}
-  </section>
   <section>
     <div class="container">
       <div class="row">
@@ -54,12 +78,36 @@ slides:
         </div>
       </div>
       <div class="row">
-
+      {% for item in page.trainings %}
+        <div class="col-md-6 col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
+          <a href="{{ item.url }}">
+            <img
+              src="{{ item.image }}"
+              class="img-fluid rounded-circle w-50 img__shadow mb-2"
+              alt="{{ item.image_alt }}"
+            >
+          </a>
+          <a class="links__no-underline" href="{{ item.url }}">
+            <h4 class="typography__orange-h4 mb-3">
+              {{ item.heading }}
+            </h4>
+          </a>
+          <a href="{{ item.url }}" class="btn btn-primary">
+            {{ item.button_text }}
+          </a>
+        </div>
+      {% endfor %}
+      {% comment %}
+        <!-- Computer Skills -->
         <div class="col-md-6 col-lg-4 text-center action-cards__col--margin-btm action-cards__col--scholarships">
           <div class="editable">
             <p>
               <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8">
-                <img alt="Young person using a laptop" class="img-fluid rounded-circle w-50 img__shadow" src="uploads/computer-skills_square.jpg">
+                <img
+                  alt="Young person using a laptop"
+                  class="img-fluid rounded-circle w-50 img__shadow"
+                  src="uploads/computer-skills_square.jpg"
+                >
               </a>
             </p>
           </div>
@@ -68,23 +116,21 @@ slides:
               Computer<br />Skills
             </h4>
           </a>
-          <div class="row action-cards__text-wrapper">
-            <div class="col align-self-start">
-              <h5 class="typography__h5 editable">
-                Get the skills to use your digital devices effectively at work and home. Many classes offer preparation for Microsoft Office Specialist certification exams.
-              </h5>
-            </div>
-          </div>
-            <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8" class="btn btn-primary editable">
-              See Courses
-            </a>
+          <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8" class="btn btn-primary editable">
+            See Courses
+          </a>
         </div>
 
+        <!-- DMI -->
         <div class="col-md-6 col-lg-4 text-center action-cards__col--margin-btm action-cards__col--volunteer">
           <div class="editable">
             <p>
               <a rel="noopener noreferrer" href="./digital-marketing">
-                <img alt="Woman with the DMI (Digital Marketing Institute) logo in the background" class="img-fluid rounded-circle w-50 img__shadow" src="uploads/dmi-brochure-image.jpg">
+                <img
+                  alt="Woman with the DMI (Digital Marketing Institute) logo in the background"
+                  class="img-fluid rounded-circle w-50 img__shadow"
+                  src="uploads/dmi-brochure-image.jpg"
+                >
               </a>
             </p>
           </div>
@@ -105,12 +151,17 @@ slides:
           </a>
         </div>
 
+        <!-- Professional Development -->
         <div class="col-md-6 col-lg-4 text-center action-cards__col--margin-btm action-cards__col--give">
           <div class="impact__give">
             <div class="editable">
               <p>
                 <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0">
-                  <img alt="Smiling professional" class="img-fluid rounded-circle w-50 img__shadow" src="uploads/professional-development_square.jpg">
+                  <img
+                    alt="Smiling professional"
+                    class="img-fluid rounded-circle w-50 img__shadow"
+                    src="uploads/professional-development_square.jpg"
+                  >
                 </a>
               </p>
             </div>
@@ -131,11 +182,17 @@ slides:
               </a>
           </div>
         </div>
+
+        <!-- Personal Enrichment -->
         <div class="col-md-6 col-lg-4 text-center action-cards__col--margin-btm action-cards__col--volunteer">
           <div class="editable">
             <p>
               <a rel="noopener noreferrer" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808">
-                <img alt="Woman with an acoustic guitar" class="img-fluid rounded-circle w-50 img__shadow" src="uploads/personal-enrichement_square.jpg">
+                <img
+                  alt="Woman with an acoustic guitar"
+                  class="img-fluid rounded-circle w-50 img__shadow"
+                  src="uploads/personal-enrichement_square.jpg"
+                >
               </a>
             </p>
           </div>
@@ -151,13 +208,21 @@ slides:
               </h5>
             </div>
           </div>
-          <a rel="noopener noreferrer" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808" class="btn btn-primary editable">See Courses</a>
+          <a rel="noopener noreferrer" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808" class="btn btn-primary editable">
+            See Courses
+          </a>
         </div>
+
+        <!-- LLI -->
         <div class="col-md-6 col-lg-4 text-center action-cards__col--margin-btm action-cards__col--volunteer">
           <div class="editable">
             <p>
               <a rel="noopener noreferrer" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290">
-                <img alt="Four people at an LLI event" class="img-fluid rounded-circle w-50 img__shadow" src="uploads/lli-square.jpg">
+                <img
+                  alt="Four people at an LLI event"
+                  class="img-fluid rounded-circle w-50 img__shadow"
+                  src="uploads/lli-square.jpg"
+                >
               </a>
             </p>
           </div>
@@ -173,8 +238,12 @@ slides:
               </h5>
             </div>
           </div>
-          <a rel="noopener noreferrer" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290" class="btn btn-primary editable">See Courses</a>
+          <a rel="noopener noreferrer" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290" class="btn btn-primary editable">
+            See Courses
+          </a>
         </div>
+
+        <!-- Career Workshops -->
         <div class="col-md-6 col-lg-4 text-center action-cards__col--margin-btm action-cards__col--volunteer">
           <div class="editable">
             <p>
@@ -245,8 +314,8 @@ slides:
           </div>
           <a rel="noopener noreferrer" href="./hcctp" class="btn btn-primary editable">Learn More</a>
         </div>
-
-      </div>
+      {% endcomment %}
+      </div><!-- End of div.row parent of all circle-icons -->
     </div>
   </section>
   <section class="mt-3">
