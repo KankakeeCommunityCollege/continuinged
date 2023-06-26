@@ -4,13 +4,14 @@ function lazyLoadFlyers() {
   [...FLYER_LIST].forEach(div => {
     const src = div.dataset.flyerSrc;
     const img = document.createElement('img');
+    const a = div.querySelector('a');
 
     img.classList.add('img-fluid', 'img--border-light');
     div.classList.add('mx-5', 'mb-3');
     img.src = src;
     img.onload = e => {
-      div.innerHTML = '';
-      div.append(img);
+      a.innerHTML = '';
+      a.append(img);
     }
   });
 }
