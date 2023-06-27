@@ -39,7 +39,7 @@ function stringReplacerFunc(match) {
 
 function createFlyerPlaceholder(string) {
   return `<div class="text-center mt-4" data-flyer-src="${string}">
-    <a href="${string}">
+    <a href="${string}" title="Download flier">
       <img src="/assets/img/loader.min.svg" class="loader loader--animate" alt="Loading...">
     </a>
   </div>`;
