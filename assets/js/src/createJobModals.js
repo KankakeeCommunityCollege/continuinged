@@ -39,7 +39,9 @@ function stringReplacerFunc(match) {
 
 function createFlyerPlaceholder(string) {
   return `<div class="text-center mt-4" data-flyer-src="${string}">
-    <img src="/assets/img/loader.min.svg" class="loader loader--animate" alt="Loading...">
+    <a href="${string}">
+      <img src="/assets/img/loader.min.svg" class="loader loader--animate" alt="Loading...">
+    </a>
   </div>`;
 }
 
@@ -73,7 +75,7 @@ function createOptionalJobInfo(phone, email, website, appUrl, fax) {
 }
 
 function loopData(data) {
-  let html = ''
+  let html = '';
   
   data.forEach((row, i) => {
 
