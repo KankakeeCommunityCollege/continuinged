@@ -9,21 +9,32 @@ trainings:
   - name: Computer Skills
     link: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8
     image: uploads/computer-skills_rectangle.jpg
-    caption: Computer Skills
     alt: Computer skills at KCC
+    caption: Computer Skills
     description: >-
       Get the skills to use your digital devices effectively at work and home.
       Many classes offer preparation for Microsoft Office Specialist
-      certification exams.  <ul>
-        <li>NEW! <a href="https://www.enrole.com/kcc/jsp/course.jsp?courseId=STCP-9024&categoryId=BF6C5EA0">
-          CompTIA Information sessions</a></li>
-        <li>NEW! <a href="https://www.enrole.com/kcc/jsp/course.jsp?courseId=STCP-9015&categoryId=BF731560">
-          CompTIA IT Fundamentals course</a></li>
-        <li>NEW! <a href="https://www.enrole.com/kcc/jsp/course.jsp?categoryId=1D8A830&courseId=STCP-9022">
-          CompTIA A+ Core 1</a></li>
-        <li>NEW! <a href="https://www.enrole.com/kcc/jsp/course.jsp?categoryId=1D8A830&courseId=STCP-9023">
-          CompTIA A+ Core 2</a></li>
-      </ul>
+      certification exams.
+    button_text: Learn More
+  - name: CompTIA<sup>&reg;</sup>
+    link: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=781FE6F0
+    image: uploads/comptia_16x9.jpg
+    alt:
+    caption: Information Technology
+    description: >-
+      CompTIA is the leading IT certification provider, with 75 million+ industry and tech professionals who design,
+      implement, manage and safeguard the technology that powers the world.
+    button_text: Learn More
+  - name: Digital Marketing
+    link: ../digital-marketing
+    image: uploads/dmi-brochure-graphic_16x9.jpg
+    alt:
+    caption: Digital Marketing
+    description: >-
+      The Digital Marketing Institute is the world's leading provider in 
+      Digital Marketing Courses, with a proven track record in transforming 
+      the skills of digital professionals to help build successful careers 
+      and promote continuous learning, to shape the workforce of the future.
     button_text: Learn More
   - name: Professional Development
     link: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0
@@ -105,7 +116,8 @@ trainings:
       </div>
       <div class="col-md-8 mt-1">
         <div>
-          <p class="mb-1"><strong>{{ course.name }}</strong> {{ course.description }}</p>
+          <h3 class="typography__h3">{{ course.name }}</h3>
+          <p class="mb-1">{{ course.description }}</p>
           <p class="mt-2"><a class="btn btn-primary" href="{{ course.link }}">{{ course.button_text }}</a></p>
         </div>
       </div>
