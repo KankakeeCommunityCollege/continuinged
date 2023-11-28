@@ -4,6 +4,7 @@ public-url: "https://continuinged.kcc.edu"
 url: "https://continuinged.kcc.edu"
 theme: "kcc-gem-theme"
 port: 3000
+# BUILD
 timezone: America/Chicago
 google-tag_key: GTM-K5WFF74
 nav_config:
