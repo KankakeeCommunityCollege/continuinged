@@ -13,9 +13,6 @@ nav_links:
   - link_text: Training
     link_href: training
     button: false
-  - link_text: Career Services
-    link_href: career-services
-    button: false
   - link_text: Facilities
     link_href: facilities
     button: false
