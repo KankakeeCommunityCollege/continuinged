@@ -1,13 +1,13 @@
-const BUTTON_SELECTOR = '[data-target="#dmiModal"]';
-const BUTTON_LIST = document.querySelectorAll(BUTTON_SELECTOR);
+const btnSelector = '[data-bs-target="#dmiModal"]';
+const btnList = document.querySelectorAll(btnSelector);
 
 function focusDmiModal() {
-  [...BUTTON_LIST].forEach(btn => {
+  [...btnList].forEach(btn => {
     btn.addEventListener('click', (e) => {
-      if (!e.target.matches(BUTTON_SELECTOR))
+      if (!e.target.matches(btnSelector))
         return;
       
-      const modal = document.querySelector(e.target.dataset.target);
+      const modal = document.querySelector(e.target.dataset.bsTarget);
 
       modal.focus();
     });
