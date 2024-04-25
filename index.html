@@ -205,14 +205,18 @@ trainings:
         <p><strong>You can make a difference in helping fulfill the lifelong learning needs of our community.</strong></p>
       </div>
       <div class="col-md-6">
-        <div class="mt-md-4 editable">
+        <div class="mt-md-4">
           <div class="card">
             <div class="card-body">
-              <p><strong>Do you have a special skill or talent that you would like to share with the community?</strong></p>
-              <p>If you have an area of expertise and a true dedication and love for teaching, please complete the form and submit it. If your course is determined to fit our current needs, we will contact you to discuss the next steps in hiring you and scheduling the class.</p>
-              <p class="text-center">
-                <button id="modalButton" role="button" disabled="disabled" data-target="#formModal" data-toggle="modal" class="btn btn-primary">Complete the Form</button>
-              </p>
+              <div class="editable">
+                <p><strong>Do you have a special skill or talent that you would like to share with the community?</strong></p>
+                <p>If you have an area of expertise and a true dedication and love for teaching, please complete the form and submit it. If your course is determined to fit our current needs, we will contact you to discuss the next steps in hiring you and scheduling the class.</p>
+                <p class="text-center">
+                  <button id="modalButton" role="button" data-bs-target="#formModal" data-bs-toggle="modal" class="btn btn-primary">
+                    Complete the Form
+                  </button>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -220,20 +224,38 @@ trainings:
     </div>
   </div>
   <!-- Modal -->
-  <div class="modal fade show" id="formModal" data-backdrop="static" data-keyboard="false" aria-modal="true" aria-labelledby="formModalLabel" aria-hidden="true" tabindex="-1" style="display: block; opacity: 0; pointer-events: none !important;">
+  <div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" aria-modal="true" aria-labelledby="formModalLabel" aria-hidden="true" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="formModalLabel">KCC&nbsp;Continuing&nbsp;Education&nbsp;Instructor Inquiry&nbsp;Form</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <script id="script" type="text/javascript" src="https://form.jotform.com/jsform/202296570720049"></script>
+          <div class="editable">
+            <p>Open form in new window/tab:
+              <a href="https://form.jotform.com/202296570720049" class="links__launch" target="_blank" rel="noopener noreferrer">
+                https://form.jotform.com/202296570720049
+              </a>
+            </p>
+          </div>
+          <iframe
+            id="JotFormIFrame-202296570720049"
+            title="Become a KCC Continuing Education Instructor"
+            onload="window.parent.scrollTo(0,0)"
+            allowtransparency="true"
+            allow="geolocation; microphone; camera; fullscreen"
+            src="https://form.jotform.com/202296570720049"
+            frameborder="0"
+            style="min-width:100%;max-width:100%;height:539px;border:none;"
+            scrolling="no"
+          >
+          </iframe>
+          <script src='https://form.jotform.com/s/umd/latest/for-form-embed-handler.js'></script>
+          <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-202296570720049'", "https://form.jotform.com/")</script>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

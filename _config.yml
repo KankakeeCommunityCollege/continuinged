@@ -3,7 +3,7 @@ site_name: Continuing Education
 public-url: "https://continuinged.kcc.edu"
 url: "https://continuinged.kcc.edu"
 canonical_baseurl: https://continuinged.kcc.edu
-theme: "kcc-gem-theme"
+theme: "kcc-gem-theme-original"
 port: 3000
 # BUILD
 timezone: America/Chicago
@@ -59,6 +59,8 @@ exclude:
   - "siteicon.png"
   - "buildtools/"
   - "postcss.config.js"
+  - "look-for-deprecated-bs4-classes.mjs"
+  - "look-for-deprecated-bs4-js.mjs"
 
 uploads_dir: "uploads/" # specifies the default uploads directory for CloudCannon
 
