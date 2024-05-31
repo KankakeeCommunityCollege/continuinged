@@ -1,5 +1,5 @@
 ---
-name: Debra Hoyer-Denson
+name: Gina Greene, EdD
 contacts_title: Director
 display_order: 1
 portrait_image: For departments with no contact photos, do not change this field.
