@@ -50,11 +50,6 @@ trainings:
     image_alt: CompTIA Authorized Partner
     url: ./comptia-certifications/
     button_text: Learn More
-  - heading: Digital&nbsp;Marketing Professional&nbsp;Certification
-    image: uploads/dmi-brochure-image_400x400.jpg
-    image_alt: Person with the DMI (Digital Marketing Institute) logo in the background
-    url: ./digital-marketing
-    button_text: Learn More
   - heading: Professional<br>Development
     image: uploads/professional-development_square.jpg
     image_alt: Smiling professional
@@ -82,7 +77,7 @@ trainings:
           <h3 class="typography__section--heading margins__heading--btm">Training</h3>
         </div>
       </div>
-      <div class="row">
+      <div class="row justify-content-center">
       {% for item in page.trainings %}
         <div class="col-md-6 col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
           <a href="{{ item.url }}">
