@@ -3,20 +3,145 @@ layout: page
 baseurl: ../
 title: Non-credit Workforce Training
 description: >-
-  
+banner_image: uploads/workforce-training_banner.jpg
+banner_image_alt: >-
+  Four photos: healthcare worker in scrubs with stethoscope, professional working on a laptop,
+  industrial worker in hard-hat and hi-vis jacket, professional in a conference room.
 ---
 <main>
   <div class="container">
     <div class="row">
       <div class="col">
+        <div class="text-center">
+          {% assign first_char = page.banner_image | slice: 0 %}
+          {% if first_char == '/' %}
+            {% assign banner = page.banner_image | remove_first: '/' %}
+          {% else %}
+            {% assign banner = page.banner_image %}
+          {% endif %}
+          <img
+            src="{{ page.baseurl }}{{ banner }}"
+            class="img-fluid"
+            alt="{{ page.banner_image_alt | replace: '"', '&quot;' }}">
+        </div>
         <h2 class="typography__h2">{{ page.title }}</h2>
         <div class="editable">
-          <p>Intro text?</p>
+          <p>
+            The Continuing Education & Business Partnerships Department focuses on customized
+            non-credit workforce training to address the training needs of local businesses.
+            We facilitate the connection between employers and skilled instructors to enhance
+            the growth of employees. If what you need is not listed,
+            <a data-bs-toggle="modal" href="#infoRequestModal">reach out</a> and we'll develop
+            a training solution tailored to your organization's needs. Financial assistance
+            available for select training programs.
+          </p>
         </div>
-        <script
-          type="text/javascript"
-          src="https://form.jotform.com/jsform/242066397656063"
-        ></script>
+        <div class="text-center mb-3">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoRequestModal">
+            Request Information
+          </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="infoRequestModal" tabindex="-1" aria-labelledby="infoRequestModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="infoRequestModalLabel">Information Request Form</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <iframe
+                  id="JotFormIFrame-242066397656063"
+                  title="Non-credit Workforce Training Interest Form"
+                  onload="window.parent.scrollTo(0,0)"
+                  allowtransparency="true"
+                  allow="geolocation; microphone; camera; fullscreen"
+                  src="https://form.jotform.com/242066397656063"
+                  frameborder="0"
+                  style="min-width:100%;max-width:100%;height:539px;border:none;"
+                  scrolling="no"
+                >
+                </iframe>
+                <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+                <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242066397656063']", "https://form.jotform.com/")</script>
+                <div class="editable">
+                  <p>
+                    Open form in new tab/window:
+                    <a class="links__launch" href="https://form.jotform.com/242066397656063" target="_blank" rel="noopener noreferrer">
+                      https://form.jotform.com/242066397656063
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div><!-- End modal -->
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <div class="editable">
+              <h3 class="typography__h3">Health Careers</h3>
+              <p>
+                KCC is an approved provider by the Illinois
+                Department of Financial and Professional
+                Regulation for continuing education units in
+                all of these professional areas:
+              </p>
+              <ul>
+                <li>Nursing</li>
+                <li>Social Work</li>
+                <li>Counseling</li>
+                <li>Respiratory Therapy</li>
+                <li>Physical Therapy</li>
+                <li>Occupational Therapy</li>
+                <li>Nursing Home Administration</li>
+                <li>Athletic Training</li>
+                <li>Dietitian</li>
+              </ul>
+              <h3 class="typography__h3">Computer Skills</h3>
+              <ul>
+                <li>Microsoft Excel</li>
+                <li>Microsoft Word</li>
+                <li>Microsoft PowerPoint</li>
+                <li>CompTIA certifications</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <div class="editable">
+              <h3 class="typography__h3">Safety & OSHA</h3>
+              <ul>
+                <li>Powered Industrial Trucks Training</li>
+                <li>Aerial Lift</li>
+                <li>OSHA 30-Hour</li>
+                <li>OSHA 10-Hour</li>
+                <li>OSHA HAZWOPER (Hazardous Waste Operations and Emergency Response)</li>
+                <li>OSHA Confined Space</li>
+                <li>Logistics Technician Training</li>
+                <li>American Heart Association CPR/AED</li>
+                <li>American Heart Association First Aid</li>
+              </ul>
+              <h3 class="typography__h3">Leadership & Management</h3>
+              <ul>
+                <li>Basic Spanish Conversation</li>
+                <li>Implicit Bias</li>
+                <li>Effective Communication</li>
+                <li>Conflict Resolution</li>
+                <li>Priority Management</li>
+                <li>Leading People and Departments</li>
+                <li>Multigenerational Workforce</li>
+                <li>Neurodivergence in the Workplace</li>
+                <li>Developing a Culture of Trust</li>
+                <li>Decision Making and Problem Solving</li>
+                <li>Diversity and Inclusion for Leaders</li>
+                <li>Goal Planning</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
