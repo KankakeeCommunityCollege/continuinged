@@ -13,7 +13,7 @@ slides:
     alt-text: Kankakee Community College - Continuing Education & Business Partnerships
     url: /
     white_background: true
-  - image: uploads/CompTIA-web-banner-fall-22.png
+  - image: uploads/CompTIA-web-banner_new-logo.png
     alt-text: >-
       Start your IT career - CompTIA® Authorized Partner - CompTIA ITF+ &
       CompTIA A+ Academic Partner - Classes start soon — Learn more! (KCC -
@@ -31,7 +31,7 @@ slides:
       what's offered for Fall 2024, Register Now!
     url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290
     white_background: true
-  - image: uploads/1170537720834896-ns1myom7lw5cd8h64o8b-height640.png
+  - image: uploads/ed2go-banner_new-logo.jpg
     alt-text: You don't need a classroom to gain new skills.
     url: https://www.ed2go.com/kankakeecc/
   - image: uploads/slider_library-group.jpg
@@ -39,6 +39,26 @@ slides:
     url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0
     text: Learn It Today. Use It Tomorrow.
 trainings:
+  - heading: Personal<br>Enrichment
+    image: uploads/personal-enrichement_square.jpg
+    image_alt: Person with an acoustic guitar
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808
+    button_text: See Courses
+  - heading: Professional<br>Development
+    image: uploads/professional-development_square.jpg
+    image_alt: Smiling professional
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0
+    button_text: See Courses
+  - heading: Customized Workforce Training
+    image: uploads/workforce-training_square.jpg
+    image_alt: Young person using a laptop
+    url: '/workforce-training/'
+    button_text: Learn More
+  - heading: Lifelong Learning<br>Institute
+    image: uploads/lli-square.jpg
+    image_alt: Four people at an LLI event
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290
+    button_text: See Courses
   - heading: Computer<br>Skills
     image: uploads/computer-skills_square.jpg
     image_alt: Young person using a laptop
@@ -49,21 +69,6 @@ trainings:
     image_alt: CompTIA Authorized Partner
     url: ./comptia-certifications/
     button_text: Learn More
-  - heading: Professional<br>Development
-    image: uploads/professional-development_square.jpg
-    image_alt: Smiling professional
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0
-    button_text: See Courses
-  - heading: Personal<br>Enrichment
-    image: uploads/personal-enrichement_square.jpg
-    image_alt: Person with an acoustic guitar
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808
-    button_text: See Courses
-  - heading: Lifelong Learning<br>Institute
-    image: uploads/lli-square.jpg
-    image_alt: Four people at an LLI event
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290
-    button_text: See Courses
 ---
 <main>
   <div class="container">
@@ -96,6 +101,8 @@ trainings:
 
     </div>
   </section>
+
+  {% comment %}
   <section class="mt-3">
     <div class="container">
       <div class="row">
@@ -105,11 +112,18 @@ trainings:
       </div>
     </div>
   </section>
+  {% endcomment %}
+
+  <div class="container">
+    <hr>
+  </div>
 
   <div class="container mt-3">
     <div class="row">
 
+      {% comment %}
       <!-- Career Workshops -->
+       <!--
       <div class="col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
         <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7C25B0">
           <svg xmlns="http://www.w3.org/2000/svg" height="150" width="150" viewbox="0 0 200 200" xml:space="preserve">
@@ -130,7 +144,9 @@ trainings:
         <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7C25B0" class="btn btn-primary">
           See Courses
         </a>
-      </div><!-- End Career Workshops -->
+      </div> -->
+      <!-- End Career Workshops -->
+      {% endcomment %}
 
       <!-- DIP -->
       <div class="col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
@@ -177,13 +193,39 @@ trainings:
           </h4>
           <h5 class="typography__h5">
             This tuition-free, 12-week program is designed to provide qualified 
-            individuals with training in highway construction careers.
+            individuals with training in highway construction&nbsp;careers.
           </h5>
         </a>
         <a href="./hcctp/" class="btn btn-primary">
           Learn More
         </a>
       </div><!-- End Highway Construction -->
+
+      <!-- Online Training -->
+      <div class="col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
+        <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF772088">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" height="150px" width="150px" xml:space="preserve">
+            <path class="svg--none" d="M0,0h200v200H0V0z" />
+            <path class="svg--blue" d="M183.42,92.49l-37.92-0.08c-4.17,0-7.58,3.41-7.58,7.58v68.25c0,4.17,3.41,7.58,7.58,7.58h37.92c4.17,0,7.58-3.41,7.58-7.58 V100C191,95.83,187.59,92.49,183.42,92.49z M183.42,160.67H145.5v-53.08h37.92V160.67z" />
+            <path class="svg--blue" d="M160.67,24.17H24.17C15.75,24.17,9,30.92,9,39.33v91c0,8.34,6.75,15.17,15.17,15.17h53.08v15.17H62.08v15.17h60.67v-15.17 h-15.17V145.5h15.17v-15.17H24.17v-91h136.5v37.92h15.17V39.33C175.83,30.92,169.01,24.17,160.67,24.17z" />
+            <polygon class="svg--blue" stroke="black" points="99.77,77.25 92.42,54.5 85.06,77.25 62.08,77.25 80.81,90.6 73.68,112.67 92.41,99.02 111.14,112.67 104.01,90.6 122.74,77.25 " />
+          </svg>
+        </a>
+        <a class="links__no-underline" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF772088">
+          <h4 class="typography__orange-h4 mb-3">
+            Online Training
+          </h4>
+          <h5 class="typography__h5">
+            Are you looking for an opportunity to enrich yourself from home? Do you want to
+            enhance your career skills, earn CEUs for continuing education, develop new
+            hobbies, or improve your overall well-being? Check out our wide variety of online
+            training options through Ed2Go and&nbsp;CareerStep.
+          </h5>
+        </a>
+        <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF772088" class="btn btn-primary">
+          Learn More
+        </a>
+      </div><!-- End Online Training -->
 
     </div>
   </div>
@@ -195,7 +237,12 @@ trainings:
         <h3 class="typography__section--heading margins__heading--btm">Become an Instructor</h3>
       </div>
       <div class="col-md-6 d-flex flex-column justify-content-around editable">
-        <p>Continuing Education instructors provide excellent teaching and learning opportunities for the community. KCC&rsquo;s Continuing Education &amp; Career Services Office continues to search for competent instructors wanting to teach short-term professional seminars and community education workshops, day or evening and on-campus or virtual.</p>
+        <p>
+          Continuing Education instructors provide excellent teaching and learning opportunities for the community.
+          KCC&rsquo;s Continuing Education &amp; Business Partnerships Office continues to search for competent
+          instructors wanting to teach short-term professional seminars and community education workshops, day or
+          evening and on-campus or virtual.
+        </p>
         <p><strong>You can make a difference in helping fulfill the lifelong learning needs of our community.</strong></p>
       </div>
       <div class="col-md-6">
