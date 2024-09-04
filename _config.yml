@@ -1,8 +1,9 @@
 title: "Kankakee Community College"
 site_name: Continuing Education
-public-url: "https://continuinged.kcc.edu"
-url: "https://continuinged.kcc.edu"
-canonical_baseurl: https://continuinged.kcc.edu
+public-url: "https://www.kcc.edu"
+url: "https://www.kcc.edu/continuinged"
+canonical_baseurl: https://www.kcc.edu/continuinged
+subsection_title: "KCC Continuing Education"
 theme: "kcc-gem-theme"
 port: 3000
 core_site: false
