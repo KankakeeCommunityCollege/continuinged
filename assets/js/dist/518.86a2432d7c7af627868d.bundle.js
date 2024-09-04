@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkcc_continuinged=self.webpackChunkkcc_continuinged||[]).push([[518],{518:function(e,t,c){c.r(t);const n='[data-bs-target="#dmiModal"]',a=document.querySelectorAll(n);t.default=function(){[...a].forEach((e=>{e.addEventListener("click",(e=>{e.target.matches(n)&&document.querySelector(e.target.dataset.bsTarget).focus()}))}))}}}]);
