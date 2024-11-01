@@ -10,11 +10,13 @@ banner_image_alt: >-
   Four photos: healthcare worker in scrubs with stethoscope, professional
   working on a laptop, industrial worker in hard-hat and hi-vis jacket,
   professional in a conference room.
+accordion_expanded: false
 ---
 <main>
   <div class="container">
     <div class="row">
       <div class="col">
+        {% comment %}
         <div class="text-center">
           {% assign first_char = page.banner_image | slice: 0 %}
           {% if first_char == '/' %}
@@ -24,94 +26,35 @@ banner_image_alt: >-
           {% endif %}
           <img src="{{ page.baseurl }}{{ banner }}" class="img-fluid" alt="{{ page.banner_image_alt | replace: '"', '"' }}" />
         </div>
+        {% endcomment %}
+        <div class="text-center">
+          <img
+            src="{{ page.baseurl }}uploads/bee-il_trio_thrive_about-bee.jpg"
+            class="img-fluid"
+            height="800"
+            width="800"
+            alt="Ready to help your business thrive! Proud partner Behind Every Employer Illinois. Powered by: ICCB"
+          >
+        </div>
         <h2 class="typography__h2">{{ page.title }}</h2>
         <div class="editable">
           <p>
-            The Continuing Education & Business Partnerships Department focuses on customized
-            non-credit workforce training to address the training needs of local businesses.
-            We facilitate the connection between employers and skilled instructors to enhance
-            the growth of employees. If what you need is not listed,
-            <a href="#JotFormIFrame-242066397656063">reach out</a> and we'll develop
-            a training solution tailored to your organization's needs. Financial assistance
-            available for select training programs.
+            The Continuing Education & Business Partnerships Department offers non-credit
+            workforce training to meet business needs, connecting employers with skilled
+            instructors. Customized solutions are also offered. Financial assistance is
+            available for qualifying training programs.
           </p>
         </div>
         <div class="text-center mb-3">
-          <!-- Button trigger modal -->
-          <a class="btn btn-primary" href="#JotFormIFrame-242066397656063" role="button">
+          <a class="btn btn-primary" href="https://form.jotform.com/242066397656063" target="_blank" rel="noopener noreferrer">
             Request Information
           </a>
         </div>
-        <div class="row">
-          <div class="col-lg-6 d-flex flex-column justify-content-center">
-            <div class="editable">
-              <h3 class="typography__h3">Health Careers</h3>
-              <p>
-                KCC is an approved provider by the Illinois
-                Department of Financial and Professional
-                Regulation for continuing education units in
-                all of these professional areas:
-              </p>
-              <ul>
-                <li>Nursing</li>
-                <li>Social Work</li>
-                <li>Counseling</li>
-                <li>Respiratory Therapy</li>
-                <li>Physical Therapy</li>
-                <li>Occupational Therapy</li>
-                <li>Nursing Home Administration</li>
-                <li>Athletic Training</li>
-                <li>Dietitian</li>
-              </ul>
-              <h3 class="typography__h3">Computer Skills</h3>
-              <ul>
-                <li>Microsoft Excel</li>
-                <li>Microsoft Word</li>
-                <li>Microsoft PowerPoint</li>
-                <li>CompTIA certifications</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6 d-flex flex-column justify-content-center">
-            <div class="editable">
-              <h3 class="typography__h3">Safety & OSHA</h3>
-              <ul>
-                <li>Powered Industrial Trucks Training</li>
-                <li>Aerial Lift</li>
-                <li>OSHA 30-Hour</li>
-                <li>OSHA 10-Hour</li>
-                <li>OSHA HAZWOPER (Hazardous Waste Operations and Emergency Response)</li>
-                <li>OSHA Confined Space</li>
-                <li>Logistics Technician Training</li>
-                <li>American Heart Association CPR/AED</li>
-                <li>American Heart Association First Aid</li>
-              </ul>
-              <h3 class="typography__h3">Leadership & Management</h3>
-              <ul>
-                <li>Basic Spanish Conversation</li>
-                <li>Implicit Bias</li>
-                <li>Effective Communication</li>
-                <li>Conflict Resolution</li>
-                <li>Priority Management</li>
-                <li>Leading People and Departments</li>
-                <li>Multigenerational Workforce</li>
-                <li>Neurodivergence in the Workplace</li>
-                <li>Developing a Culture of Trust</li>
-                <li>Decision Making and Problem Solving</li>
-                <li>Diversity and Inclusion for Leaders</li>
-                <li>Goal Planning</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <iframe id="JotFormIFrame-242066397656063" title="Non-credit Workforce Training Interest Form" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/242066397656063" frameborder="0" style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no">
-            </iframe>
-            <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-            <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242066397656063']", "https://form.jotform.com/")</script>
-          </div>
-        </div>
+        <p>
+          KCC is an approved provider by the Illinois Department of Financial and Professional
+          Regulation for continuing education units in all of these professional&nbsp;areas:
+        </p>
+        {% include accordion.html %}
       </div>
     </div>
   </div>
