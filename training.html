@@ -10,7 +10,6 @@ trainings:
     url: ../workforce-training/
     image: uploads/customized-workforce-training.jpg
     image_alt:
-    caption: Customized Workforce Training
     description: >-
       From healthcare to leadership, we provide tailored solutions to train employees
       for success. Financial assistance is available for select&nbsp;programs.
@@ -19,7 +18,6 @@ trainings:
     url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8
     image: uploads/computer-skills_square.jpg
     image_alt: Computer skills at KCC
-    caption: Computer Skills
     description: >-
       Get the skills to use your digital devices effectively at work and home.
       Many classes offer preparation for Microsoft Office Specialist
@@ -29,7 +27,6 @@ trainings:
     url: ../comptia-certifications/
     image: uploads/comptia-server.jpg
     image_alt:
-    caption: Information Technology<br>CompTIA<sup>&reg;</sup>
     description: >-
       CompTIA is the leading IT certification provider, with 75 million+ industry and tech professionals who design,
       implement, manage and safeguard the technology that powers the world.
@@ -37,7 +34,6 @@ trainings:
   - heading: Professional Development
     url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0
     image: uploads/professional-development_square.jpg
-    caption: Professional Development
     image_alt: Professional development at KCC
     description: >-
       We offer up-to-date topics for a wide range of careers. Many classes offer
@@ -45,19 +41,30 @@ trainings:
       experts so you stay current without the hassle of big city travel and
       parking charges!
     button_text: Browse Classes
-  - heading: Personal Enrichment
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808
-    image: uploads/personal-enrichement_square.jpg
-    caption: Personal Enrichment
-    image_alt: Personal enrichment at KCC
+  - heading: Driver Improvement Program
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7887E8
+    image: uploads/dip_square.jpg
+    image_alt: Driver improvement program at KCC
     description: >-
-      Here's where you can develop a hobby, meet people with similar interests,
-      and explore the latest trends. You'll have a good time!
+      This National Safety Council Defensive Driving Course (DDC-4) offers
+      participants the opportunity to keep minor traffic violations off their
+      driving records. Some insurance companies offer premium discounts to those
+      who complete a DDC-4 course.
     button_text: Browse Classes
+  - heading: Online Training
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF772088
+    image: assets/img/online-training_square.png
+    image_alt: Stylized icon of a computer monitor showing a star and a smart phone
+    description: >-
+      Ready to advance your career from the comfort of home? You can master new
+      skills or earn CEUs for continuing education. Explore a wide range of
+      online training offered by Ed2Go &&nbsp;CareerStep.
+    button_text: Browse Classes
+more_training_heading: More Options
+more_training_options:
   - heading: Lifelong Learning Institute
     url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290
     image: uploads/lli-square.jpg
-    caption: Lifelong Learning Institute
     image_alt: Lifelong Learning Institute at KCC
     description: >-
       If you are age 50 or better, you'll find stimulating intellectual and
@@ -68,22 +75,18 @@ trainings:
   - heading: Highway Construction
     url: ../hcctp/
     image: uploads/highway-construct_square.jpg
-    caption: Highway Construction
     image_alt: Highway construction at KCC
     description: >-
       This tuition-free, 14-week program is designed to provide qualified
       individuals with training in highway construction careers.
     button_text: Learn More
-  - heading: Driver Improvement Program
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7887E8
-    image: uploads/dip_square.jpg
-    caption: Driver Improvement Program
-    image_alt: Driver improvement program at KCC
+  - heading: Personal Enrichment
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808
+    image: uploads/personal-enrichement_square.jpg
+    image_alt: Personal enrichment at KCC
     description: >-
-      This National Safety Council Defensive Driving Course (DDC-4) offers
-      participants the opportunity to keep minor traffic violations off their
-      driving records. Some insurance companies offer premium discounts to those
-      who complete a DDC-4 course.
+      Here's where you can develop a hobby, meet people with similar interests,
+      and explore the latest trends. You'll have a good time!
     button_text: Browse Classes
 ---
 
@@ -91,6 +94,31 @@ trainings:
   <div class="container">
     <div class="row justify-content-center">
       {% for item in page.trainings %}
+        {% assign first_char = item.image | slice: 0 %}
+        {% if first_char == '/' %}
+          {% assign image = item.image | remove_first: '/' %}
+        {% else %}
+          {% assign image = item.image %}
+        {% endif %}
+        <div class="col-md-6 col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
+          <a href="{{ item.url }}">
+            <img src="{{ page.baseurl }}{{ image }}" class="img-fluid rounded-circle w-50 img__shadow mb-2" alt="{{ item.image_alt }}" />
+          </a>
+          <a class="links__no-underline" href="{{ item.url }}">
+            <h4 class="typography__orange-h4 mb-3">
+              {{ item.heading }}
+            </h4>
+          </a>
+          <p class="typography__larger-p">{{ item.description }}</p>
+          <a href="{{ item.url }}" class="btn btn-primary">
+            {{ item.button_text }}
+          </a>
+        </div>
+      {% endfor %}
+        <div class="col-12 margins__col--top section__heading-underline mb-4">
+          <h3 class="typography__section--heading margins__heading--btm">{{ page.more_training_heading }}</h3>
+        </div>
+      {% for item in page.more_training_options %}
         {% assign first_char = item.image | slice: 0 %}
         {% if first_char == '/' %}
           {% assign image = item.image | remove_first: '/' %}
