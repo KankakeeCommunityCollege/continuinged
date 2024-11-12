@@ -7,44 +7,51 @@ description: >-
   KCC Continuing Education & Career Services has flexible, convenient and
   cost-effective training. Career skills, computers personal enrichment, and
   lifelong learning.
-student_testimonials_heading: Testimonials
-slides:
-  - image: uploads/workforce-training-provider_banner.jpg
-    alt-text: >-
-      Customized Training - Discounts and vouchers available for qualified training.
-      Invest in your team's growth and save your budget! Funding to offset the costs
-      for non-credit workforce training for area businesses is through a grant from
-      the Illinois Community College Board. Kankakee Community College Continuing
-      Education & Business Partnerships, Behind Every Employer Illinois, Powered
-      by&nbsp;ICCB.
-    url: ./workforce-training/
-    white_background: true
-  - image: uploads/CompTIA-web-banner_new-logo.png
-    alt-text: >-
-      Start your IT career - CompTIA® Authorized Partner - CompTIA ITF+ &
-      CompTIA A+ Academic Partner - Classes start soon — Learn more! (KCC -
-      Continuing Education & Career Services.)
+main_banner_image: uploads/workforce-training-provider_banner.jpg
+main_banner_alt_text: >-
+  Customized Training - Discounts and vouchers available for qualified training.
+  Invest in your team's growth and save your budget! Funding to offset the costs
+  for non-credit workforce training for area businesses is through a grant from
+  the Illinois Community College Board. Kankakee Community College Continuing
+  Education & Business Partnerships, Behind Every Employer Illinois, Powered
+  by ICCB.
+main_banner_link_url: ./workforce-training/
+main_banner_link_title: Customized Workforce Training
+main_banner_border: true
+professional_development_trainings:
+  - heading: Customized Workforce Training
+    image: uploads/customized-workforce-training.jpg
+    image_alt: Young person using a laptop
+    url: './workforce-training/'
+    description: >-
+      From healthcare to leadership, we provide tailored solutions to train employees for success.
+      Financial assistance is available for select&nbsp;programs.
+    button_text: Learn More
+  - heading: Computer<br>Skills
+    image: uploads/computer-skills_square.jpg
+    image_alt: Young person using a laptop
+    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8
+    description: >-
+      Get the skills to use your digital devices effectively at work and home. Many classes offer
+      preparation for Microsoft Office Specialist certification&nbsp;exams.
+    button_text: Browse Classes
+  - heading: Information Technology CompTIA<sup>&reg;</sup>
+    image: uploads/comptia-server.jpg
+    image_alt: CompTIA Authorized Partner
     url: ./comptia-certifications/
-    white_background: true
-  - image: /uploads/mailer-banner_fall-2024.jpg
-    alt-text: See what's offered for Winter/Spring 2024.
-    url: https://cdn.kcc.edu/continuinged/mailers/cont-ed-mailer.pdf
-    text:
-  - image: /uploads/lli-web-banner_fall-24.jpg
-    alt-text: >-
-      Kankakee Community College Lifelong Learning Institute. Curiosity
-      never retires! Classes for active people ages 50 and better. See
-      what's offered for Fall 2024, Register Now!
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290
-    white_background: true
-  - image: uploads/ed2go-banner_new-logo.jpg
-    alt-text: You don't need a classroom to gain new skills.
-    url: https://www.ed2go.com/kankakeecc/
-  - image: uploads/slider_library-group.jpg
-    alt-text: Learn It Today. Use It Tomorrow.
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0
-    text: Learn It Today. Use It Tomorrow.
-trainings:
+    description: >-
+      CompTIA is the leading IT certification provider, with 75 million+ industry and tech professionals
+      who design, implement, manage and safeguard the technology that powers the&nbsp;world.
+    button_text: Learn More
+  - heading: Highway Construction Careers Training Program
+    image: assets/img/hcctp.png
+    image_alt: Icon of a wrench and hammer
+    url: ./hcctp/
+    description: >-
+      This tuition-free, 12-week program is designed to provide qualified individuals with training in
+      highway construction&nbsp;careers.
+    button_text: Learn More
+personal_enrichment_trainings:
   - heading: Personal<br>Enrichment
     image: uploads/personal-enrichement_square.jpg
     image_alt: Person with an acoustic guitar
@@ -55,30 +62,42 @@ trainings:
     image_alt: Smiling professional
     url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0
     button_text: Browse Classes
-  - heading: Customized Workforce Training
-    image: uploads/customized-workforce-training.jpg
-    image_alt: Young person using a laptop
-    url: './workforce-training/'
-    button_text: Learn More
   - heading: Lifelong Learning<br>Institute
     image: uploads/lli-square.jpg
     image_alt: Four people at an LLI event
     url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290
     button_text: Browse Classes
-  - heading: Computer<br>Skills
-    image: uploads/computer-skills_square.jpg
-    image_alt: Young person using a laptop
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8
-    button_text: Browse Classes
-  - heading: Information Technology CompTIA<sup>&reg;</sup>
-    image: uploads/comptia-server.jpg
-    image_alt: CompTIA Authorized Partner
-    url: ./comptia-certifications/
-    button_text: Learn More
 ---
 <main>
   <div class="container">
-    {% include hero-slider.html %}
+    <div class="row">
+      <div class="col-12 text-center">
+        {% assign first_char = page.main_banner_image | slice: 0 %}
+        {% if first_char == '/' %}
+          {% assign banner = page.main_banner_image | remove_first: '/' %}
+        {% else %}
+          {% assign banner = page.main_banner_image %}
+        {% endif %}
+        {% if page.main_banner_link_url and page.main_banner_link_url != '#' %}
+        <a href="{{ page.main_banner_link_url }}"{% if page.main_banner_link_title %} title="{{ page.main_banner_link_title }}"{% endif %}>
+        {% endif %}
+        <img
+          src="{{ page.baseurl }}{{ banner }}"
+          class="img-fluid w-100{% if page.main_banner_border %} border{% endif %}"
+          alt="{{ page.main_banner_alt_text | replace: '"', '&quot;' }}">
+        {% if page.main_banner_link_url and page.main_banner_link_url != '#' %}
+        </a>
+        {% endif %}
+      </div>
+      <div class="col-12 mt-3 text-center editable">
+        <p>
+          Printable continuing Education <a href="https://cdn.kcc.edu/continuinged/mailers/cont-ed-mailer.pdf" target="_blank" class="btn btn-primary">class schedule</a>
+        </p>
+        <p>
+          Register using links here, or contact our office.
+        </p>
+      </div>
+    </div>
   </div>
   <section>
     <div class="container">
@@ -87,9 +106,21 @@ trainings:
           <h3 class="typography__section--heading margins__heading--btm">What We Offer</h3>
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <h3 class="typography__h3">Professional Development</h3>
+          <p>
+            Advance your career, or get it started. We offer up-to-date topics for a wide range of careers. Many classes offer
+            professional development/certification units. Learn from nationally-known experts so you stay current without the hassle
+            of big city travel and parking charges!
+            <a class="btn btn-primary" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0">Find the right training</a>
+          </p>
+          <h4 class="typography__h4">Areas</h4>
+        </div>
+      </div>
       <div class="row justify-content-center">
-      {% for item in page.trainings %}
-        <div class="col-md-6 col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
+      {% for item in page.professional_development_trainings %}
+        <div class="col-xl-3 col-lg-6 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
           <a href="{{ item.url }}">
             <img src="{{ item.image }}" class="img-fluid rounded-circle w-50 img__shadow mb-2" alt="{{ item.image_alt }}" />
           </a>
@@ -98,6 +129,9 @@ trainings:
               {{ item.heading }}
             </h4>
           </a>
+          <p class="typography__larger-p">
+            {{ item.description }}
+          </p>
           <a href="{{ item.url }}" class="btn btn-primary">
             {{ item.button_text }}
           </a>
