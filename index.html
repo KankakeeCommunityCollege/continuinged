@@ -7,103 +7,12 @@ description: >-
   KCC Continuing Education & Career Services has flexible, convenient and
   cost-effective training. Career skills, computers personal enrichment, and
   lifelong learning.
-main_banner_image: uploads/workforce-training-provider_banner.jpg
+main_banner_image: assets/img/continuinged-banner_z91_8067.jpg
 main_banner_alt_text: >-
-  Customized Training - Discounts and vouchers available for qualified training.
-  Invest in your team's growth and save your budget! Funding to offset the costs
-  for non-credit workforce training for area businesses is through a grant from
-  the Illinois Community College Board. Kankakee Community College Continuing
-  Education & Business Partnerships, Behind Every Employer Illinois, Powered
-  by ICCB.
-main_banner_link_url: ./workforce-training/
+  8 people in the KCC courtyard
+main_banner_link_url:
 main_banner_link_title: Customized Workforce Training
 main_banner_border: true
-professional_development_trainings:
-  - heading: Customized Workforce Training
-    image: uploads/customized-workforce-training.jpg
-    image_alt: Young person using a laptop
-    url: './workforce-training/'
-    description: >-
-      From healthcare to leadership, we provide tailored solutions to train employees for success.
-      Financial assistance is available for select&nbsp;programs.
-    button_text: Learn More
-  - heading: Computer<br>Skills
-    image: uploads/computer-skills_square.jpg
-    image_alt: Young person using a laptop
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8
-    description: >-
-      Get the skills to use your digital devices effectively at work and home. Many classes offer
-      preparation for Microsoft Office Specialist certification&nbsp;exams.
-    button_text: Browse Classes
-  - heading: Information Technology CompTIA<sup>&reg;</sup>
-    image: uploads/comptia-server.jpg
-    image_alt: CompTIA Authorized Partner
-    url: ./comptia-certifications/
-    description: >-
-      CompTIA is the leading IT certification provider, with 75 million+ industry and tech professionals
-      who design, implement, manage and safeguard the technology that powers the&nbsp;world.
-    button_text: Learn More
-  - heading: Highway Construction Careers Training Program
-    image: assets/img/hcctp.png
-    image_alt: Icon of a wrench and hammer
-    url: ./hcctp/
-    description: >-
-      This tuition-free, 12-week program is designed to provide qualified individuals with training in
-      highway construction&nbsp;careers.
-    button_text: Learn More
-personal_enrichment_trainings:
-  - heading: Lifelong Learning<br>Institute
-    image: uploads/lli-square.jpg
-    image_alt: Four people at an LLI event
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290
-    description: >-
-      Classes for the love of learning. Here's where you find affordable, high-quality, non-credit classes
-      to people ages 50 and older. Sessions take place in an environment that fosters participation. Classes
-      focus on different intellectual and cultural topics and vary from a single session of a few hours to
-      several meetings. In-person and live webinar options are offered, and prices&nbsp;vary.<br>
-      Print version: <a target="_blank" href="./uploads/pdf/lifelong-learning-classes.pdf">Lifelong Learning Institute class schedule</a>
-    button_text: Browse Classes
-  - heading: Driver Improvement Program
-    image: assets/img/dip.png
-    image_alt: Icon of a car
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7887E8
-    description: >-
-      This National Safety Council Defensive Driving Course (DDC-4) offers participants the opportunity to
-      keep minor traffic violations off their driving records. Some insurance companies offer premium
-      discounts to those who complete a DDC-4&nbsp;course.
-    button_text: View Classes
-online_learning_trainings:
-  - heading: Ed2Go
-    image:
-    image_alt:
-    url: https://www.ed2go.com/kankakeecc/
-    description: >-
-      Classes include lessons, quizzes, hands-on assignments, discussion areas, links and more. We offer a
-      wide range of highly interactive courses that you can take entirely over the Internet. All of our
-      courses are led by expert instructors, many of whom are nationally known authors. Our online courses
-      are affordable, fun, fast, convenient, and geared just for&nbsp;you.
-    button_text: Browse Classes
-  - heading: Ed2go Career Training
-    image:
-    image_alt:
-    url: https://onlinetraining.kcc.edu/
-    description: >-
-      Find online open enrollment programs designed to provide the skills necessary to acquire professional
-      level positions for many in-demand occupations. The programs are designed by a team of professionals
-      from each respective field, providing you with effective web-based learning programs.
-      Instructors/mentors are actively involved in your online learning experience, responding to any
-      questions or concerns, as well as encouraging and motivating you to&nbsp;succeed.
-    button_text: Browse Classes
-  - heading: CareerStep
-    image:
-    image_alt:
-    url: https://www.careerstep.com/lp/partner/ap/kcc/
-    description: >-
-      KCC has teamed up with CareerStep to provide industry-recognized healthcare training for Medical
-      Billing and Coding, Medical Transcription, Medical Administrative Assistant, and Pharmacy Technician.
-      These online programs help students gain important job skills and prepare for certifications that are
-      valuable for their&nbsp;careers.
-    button_text: Browse Classes
 ---
 <main>
   <div class="container">
@@ -126,14 +35,6 @@ online_learning_trainings:
         </a>
         {% endif %}
       </div>
-      <div class="col-12 mt-3 text-center editable">
-        <p>
-          Printable continuing Education <a href="https://cdn.kcc.edu/continuinged/mailers/cont-ed-mailer.pdf" target="_blank" class="btn btn-primary">class schedule</a>
-        </p>
-        <p>
-          Register using links here, or contact our office.
-        </p>
-      </div>
     </div>
   </div>
   <section>
@@ -143,106 +44,94 @@ online_learning_trainings:
           <h3 class="typography__section--heading margins__heading--btm">What We Offer</h3>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <h3 class="typography__h3">Professional Development</h3>
-          <p>
-            Advance your career, or get it started. We offer up-to-date topics for a wide range of careers. Many classes offer
-            professional development/certification units. Learn from nationally-known experts so you stay current without the hassle
-            of big city travel and parking charges!<br>
-            <a class="btn btn-primary" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0">Find the right training</a>
-          </p>
-          <h4 class="typography__h4">Areas</h4>
-        </div>
-      </div>
-      <div class="row">
-      {% for item in page.professional_development_trainings %}
-      {% assign mod = forloop.index | modulo: 2 %}
-        {% if mod == 0 %}
-        <div class="col-xl-4 col-lg-6 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
-        {% else %}
-         <div class="col-xl-4 col-lg-6 offset-xl-2 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
-        {% endif %}
-          <a href="{{ item.url }}">
-            <img src="{{ item.image }}" class="img-fluid rounded-circle w-50 img__shadow mb-2" alt="{{ item.image_alt }}" />
-          </a>
-          <a class="links__no-underline" href="{{ item.url }}">
-            <h4 class="typography__orange-h4 mb-3">
-              {{ item.heading }}
-            </h4>
-          </a>
-          <p class="typography__larger-p">
-            {{ item.description }}
-          </p>
-          <a href="{{ item.url }}" class="btn btn-primary">
-            {{ item.button_text }}
-          </a>
-        </div>
-      {% endfor %}
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <h3 class="typography__h3">Personal Enrichment</h3>
-          <p>
-            Develop a hobby, meet people with similar interests, and explore the latest trends. You'll have a good time!<br>
-            <a class="btn btn-primary" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808">Choose your classes</a>
-          </p>
-          <h4 class="typography__h4">Areas</h4>
-        </div>
-      </div>
       <div class="row justify-content-center">
-      {% for item in page.personal_enrichment_trainings %}
-        <div class="col-xl-4 col-lg-6 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
-          <a href="{{ item.url }}">
-            <img src="{{ item.image }}" class="img-fluid rounded-circle w-50 img__shadow mb-2" alt="{{ item.image_alt }}" />
-          </a>
-          <a class="links__no-underline" href="{{ item.url }}">
-            <h4 class="typography__orange-h4 mb-3">
-              {{ item.heading }}
-            </h4>
-          </a>
-          <p class="typography__larger-p">
-            {{ item.description }}
-          </p>
-          <a href="{{ item.url }}" class="btn btn-primary">
-            {{ item.button_text }}
-          </a>
+        <div class="col-lg-4 col-md-6 d-flex mb-4">
+          <div class="card positioning--max-width-350">
+            <img
+              src="{{ page.baseurl }}assets/img/professional-development_card-img.jpg"
+              class="card-img-top"
+              alt="3 professionals in front of a colorful background"
+            >
+            <div class="card-body">
+              <h4 class="card-title typography__h3">Professional Development</h4>
+              <p class="card-text">
+                Advance your career, or get it started. We offer up-to-date topics for a wide range of careers. Many classes offer
+                professional development/certification units. Learn from nationally-known experts so you stay current without the hassle
+                of big city travel and parking charges!
+              </p>
+              <p class="card-text">
+                <a class="btn btn-primary" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0">Find the right training</a>
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="./workforce-training/">Customized Workforce Training</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8">Computer Skills</a>
+              </li>
+              <li class="list-group-item">
+                <a href="./comptia-certifications/">Information Technology CompTIA<sup>&reg;</sup></a>
+              </li>
+              <li class="list-group-item">
+                <a href="./hcctp/">Highway Construction Careers Training&nbsp;Program</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      {% endfor %}
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <h3 class="typography__h3">Online Learning</h3>
-          <p>
-            The options are endless! Enhance your career skills, earn CEUs for continuing education, develop new hobbies,
-            or improve your overall well-being.
-          </p>
-          <h4 class="typography__h4">Areas</h4>
+        <div class="col-lg-4 col-md-6 d-flex mb-4">
+          <div class="card positioning--max-width-350">
+            <img
+              src="{{ page.baseurl }}uploads/lli-square.jpg"
+              class="card-img-top"
+              alt="4 people at an LLI event"
+            >
+            <div class="card-body">
+              <h4 class="card-title typography__h3">Personal Enrichment</h4>
+              <p class="card-text">
+                Develop a hobby, meet people with similar interests, and explore the latest trends. You'll have a good time!
+              </p>
+              <p class="card-text">
+                <a class="btn btn-primary" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808">Choose your classes</a>
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290">Lifelong Learning Institute</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7887E8">Driver Improvement Program</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="row justify-content-center">
-      {% for item in page.online_learning_trainings %}
-        <div class="col-xl-4 col-lg-6 text-center mb-5 mt-3 d-flex flex-column align-items-center justify-content-between">
-          {% if item.image %}
-          <a href="{{ item.url }}">
-            <img src="{{ item.image }}" class="img-fluid rounded-circle w-50 img__shadow mb-2" alt="{{ item.image_alt }}" />
-          </a>
-          {% endif %}
-          <a class="links__no-underline" href="{{ item.url }}">
-            <h4 class="typography__orange-h4 mb-3">
-              {{ item.heading }}
-            </h4>
-          </a>
-          <p class="typography__larger-p">
-            {{ item.description }}
-          </p>
-          <a href="{{ item.url }}" class="btn btn-primary">
-            {{ item.button_text }}
-          </a>
+        <div class="col-lg-4 col-md-6 d-flex mb-4">
+          <div class="card positioning--max-width-350">
+            <img
+              src="{{ page.baseurl }}uploads/computer-skills_square.jpg"
+              class="card-img-top"
+              alt="Young person using a laptop"
+            >
+            <div class="card-body">
+              <h4 class="card-title typography__h3">Online Learning</h4>
+              <p class="card-text">
+                The options are endless! Enhance your career skills, earn CEUs for continuing education, develop new hobbies, or improve
+                your overall well-being.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="https://www.ed2go.com/kankakeecc/">Ed2Go</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://onlinetraining.kcc.edu/">Ed2go Career Training</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://www.careerstep.com/lp/partner/ap/kcc/">CareerStep</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      {% endfor %}
       </div>
 
     </div>
@@ -250,10 +139,18 @@ online_learning_trainings:
 
   {% include testimonials.html %}
 
+  
   <div class="container">
     <div class="row">
-      <div class="col margins__col--top section__heading-underline">
-        <h3 class="typography__section--heading margins__heading--btm">Contact Us</h3>
+      <div class="col mt-3 editable">
+        <p>
+          Register using links here, or contact our office.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mt-2 section__heading-underline">
+        <h3 class="typography__section--heading margins__heading--btm" id="contact">Contact Us</h3>
       </div>
     </div>
     <div class="row">
