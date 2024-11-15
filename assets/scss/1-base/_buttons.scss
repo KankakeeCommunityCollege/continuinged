@@ -35,3 +35,33 @@
   background-color: $btn-hover-bg;
   border-color: $btn-hover-border;
 }
+
+.buttons__action--width-auto {
+  width: auto
+}
+
+.buttons__action--width-auto:nth-child(1) {
+  margin-right: .25rem
+}
+
+.buttons__action--width-auto:nth-child(2) {
+  margin-left: .25rem
+}
+
+@media screen and (min-width: 360px) {
+  .buttons__action {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .buttons__action {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .buttons__action {
+    font-size: 1.75rem;
+  }
+}

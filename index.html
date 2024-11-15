@@ -7,78 +7,40 @@ description: >-
   KCC Continuing Education & Career Services has flexible, convenient and
   cost-effective training. Career skills, computers personal enrichment, and
   lifelong learning.
-student_testimonials_heading: Testimonials
-slides:
-  - image: uploads/workforce-training-provider_banner.jpg
-    alt-text: >-
-      Customized Training - Discounts and vouchers available for qualified training.
-      Invest in your team's growth and save your budget! Funding to offset the costs
-      for non-credit workforce training for area businesses is through a grant from
-      the Illinois Community College Board. Kankakee Community College Continuing
-      Education & Business Partnerships, Behind Every Employer Illinois, Powered
-      by&nbsp;ICCB.
-    url: ./workforce-training/
-    white_background: true
-  - image: uploads/CompTIA-web-banner_new-logo.png
-    alt-text: >-
-      Start your IT career - CompTIA® Authorized Partner - CompTIA ITF+ &
-      CompTIA A+ Academic Partner - Classes start soon — Learn more! (KCC -
-      Continuing Education & Career Services.)
-    url: ./comptia-certifications/
-    white_background: true
-  - image: /uploads/mailer-banner_fall-2024.jpg
-    alt-text: See what's offered for Winter/Spring 2024.
-    url: https://cdn.kcc.edu/continuinged/mailers/cont-ed-mailer.pdf
-    text:
-  - image: /uploads/lli-web-banner_fall-24.jpg
-    alt-text: >-
-      Kankakee Community College Lifelong Learning Institute. Curiosity
-      never retires! Classes for active people ages 50 and better. See
-      what's offered for Fall 2024, Register Now!
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290
-    white_background: true
-  - image: uploads/ed2go-banner_new-logo.jpg
-    alt-text: You don't need a classroom to gain new skills.
-    url: https://www.ed2go.com/kankakeecc/
-  - image: uploads/slider_library-group.jpg
-    alt-text: Learn It Today. Use It Tomorrow.
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0
-    text: Learn It Today. Use It Tomorrow.
-trainings:
-  - heading: Personal<br>Enrichment
-    image: uploads/personal-enrichement_square.jpg
-    image_alt: Person with an acoustic guitar
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808
-    button_text: Browse Classes
-  - heading: Professional<br>Development
-    image: uploads/professional-development_square.jpg
-    image_alt: Smiling professional
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0
-    button_text: Browse Classes
-  - heading: Customized Workforce Training
-    image: uploads/customized-workforce-training.jpg
-    image_alt: Young person using a laptop
-    url: './workforce-training/'
-    button_text: Learn More
-  - heading: Lifelong Learning<br>Institute
-    image: uploads/lli-square.jpg
-    image_alt: Four people at an LLI event
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290
-    button_text: Browse Classes
-  - heading: Computer<br>Skills
-    image: uploads/computer-skills_square.jpg
-    image_alt: Young person using a laptop
-    url: https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8
-    button_text: Browse Classes
-  - heading: Information Technology CompTIA<sup>&reg;</sup>
-    image: uploads/comptia-server.jpg
-    image_alt: CompTIA Authorized Partner
-    url: ./comptia-certifications/
-    button_text: Learn More
+main_banner_image: assets/img/continuinged-banner_z91_8067.jpg
+main_banner_alt_text: >-
+  8 people in the KCC courtyard
+main_banner_link_url:
+main_banner_link_title: Customized Workforce Training
+main_banner_border: true
 ---
 <main>
   <div class="container">
-    {% include hero-slider.html %}
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="img__wrapper--relative">
+          <h2 class="typography__banner-heading img__wrapper--heading">Career Advancement &bull; Skill Building &bull; Personal&nbsp;Growth</h2>
+          <div class="d-none d-md-flex img__wrapper--buttons">
+            <a href="./workforce-training/" class="btn buttons__action buttons__action--width-auto flex-fill">Get Customized training</a>
+            <a href="https://www.enrole.com/kcc/jsp/index.jsp" class="btn buttons__action buttons__action--width-auto flex-fill">Explore Classes</a>
+          </div>
+          {% assign first_char = page.main_banner_image | slice: 0 %}
+          {% if first_char == '/' %}
+            {% assign banner = page.main_banner_image | remove_first: '/' %}
+          {% else %}
+            {% assign banner = page.main_banner_image %}
+          {% endif %}
+          <img
+            src="{{ page.baseurl }}{{ banner }}"
+            class="img-fluid w-100{% if page.main_banner_border %} border{% endif %}"
+            alt="{{ page.main_banner_alt_text | replace: '"', '&quot;' }}">
+        </div>
+        <div class="d-flex d-md-none flex-column">
+            <a href="./workforce-training/" class="btn buttons__action mt-2 flex-fill">Get Customized training</a>
+            <a href="https://www.enrole.com/kcc/jsp/index.jsp" class="btn buttons__action mt-2 flex-fill">Explore Classes</a>
+          </div>
+      </div>
+    </div>
   </div>
   <section>
     <div class="container">
@@ -88,224 +50,123 @@ trainings:
         </div>
       </div>
       <div class="row justify-content-center">
-      {% for item in page.trainings %}
-        <div class="col-md-6 col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
-          <a href="{{ item.url }}">
-            <img src="{{ item.image }}" class="img-fluid rounded-circle w-50 img__shadow mb-2" alt="{{ item.image_alt }}" />
-          </a>
-          <a class="links__no-underline" href="{{ item.url }}">
-            <h4 class="typography__orange-h4 mb-3">
-              {{ item.heading }}
-            </h4>
-          </a>
-          <a href="{{ item.url }}" class="btn btn-primary">
-            {{ item.button_text }}
-          </a>
+        <div class="col-lg-4 col-md-6 d-flex mb-4">
+          <div class="card positioning--max-width-350">
+            <img
+              src="{{ page.baseurl }}assets/img/professional-development_card-img.jpg"
+              class="card-img-top"
+              alt="3 professionals in front of a colorful background"
+            >
+            <div class="card-body">
+              <h4 class="card-title">Professional Development</h4>
+              <p class="card-text">
+                Advance your career, earn professional development units, and learn from expert instructors&mdash;without the
+                hassle of city travel.
+              </p>
+              <p class="card-text">
+                <a class="btn btn-primary" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0">Find the right training</a>
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="./workforce-training/">Customized Workforce Training</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8">Computer Skills</a>
+              </li>
+              <li class="list-group-item">
+                <a href="./comptia-certifications/">Information Technology CompTIA<sup>&reg;</sup></a>
+              </li>
+              <li class="list-group-item">
+                <a href="./hcctp/">Highway Construction Careers Training&nbsp;Program</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      {% endfor %}
-      </div><!-- End of div.row parent of all circle-icons -->
-
-    </div>
-  </section>
-
-  {% comment %}
-  <section class="mt-3">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF772088"><img src="{{ page.baseurl }}assets/img/kcc-placeholder.png" data-src="{{ page.baseurl }}uploads/ed2go-banner_updates.jpg" class="img-fluid img__full-width" alt="" /></a>
+        <div class="col-lg-4 col-md-6 d-flex mb-4">
+          <div class="card positioning--max-width-350">
+            <img
+              src="{{ page.baseurl }}uploads/lli-square.jpg"
+              class="card-img-top"
+              alt="4 people at an LLI event"
+            >
+            <div class="card-body">
+              <h4 class="card-title">Personal Enrichment</h4>
+              <p class="card-text">
+                Develop a hobby, meet people with similar interests, and explore the latest trends. You'll have a good time!
+              </p>
+              <p class="card-text">
+                <a class="btn btn-primary" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808">Choose your classes</a>
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290">Lifelong Learning Institute</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7887E8">Driver Improvement Program</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex mb-4">
+          <div class="card positioning--max-width-350">
+            <img
+              src="{{ page.baseurl }}uploads/computer-skills_square.jpg"
+              class="card-img-top"
+              alt="Young person using a laptop"
+            >
+            <div class="card-body">
+              <h4 class="card-title">Online Learning</h4>
+              <p class="card-text">
+                The options are endless! Enhance your career skills, earn CEUs for continuing education, develop new hobbies, or improve
+                your overall well-being.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="https://www.ed2go.com/kankakeecc/">Ed2Go</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://onlinetraining.kcc.edu/">Ed2go Career Training</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://www.careerstep.com/lp/partner/ap/kcc/">CareerStep</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
-  {% endcomment %}
-
-  <div class="container">
-    <hr>
-  </div>
-
-  <div class="container mt-3">
-    <div class="row">
-
-      {% comment %}
-      <!-- Career Workshops -->
-       <!--
-      <div class="col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
-        <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7C25B0">
-          <svg xmlns="http://www.w3.org/2000/svg" height="150" width="150" viewbox="0 0 200 200" xml:space="preserve">
-          <path class="svg--none" d="M12.6,12.6h174.8v174.8H12.6V12.6z" />
-          <path class="svg--blue" d="M158.3,59.9h-29.1V45.4c0-8.1-6.5-14.6-14.6-14.6H85.4c-8.1,0-14.6,6.5-14.6,14.6v14.6H41.7c-8.1,0-14.5,6.5-14.5,14.6
-            l-0.1,80.1c0,8.1,6.5,14.6,14.6,14.6h116.6c8.1,0,14.6-6.5,14.6-14.6V74.5C172.9,66.4,166.4,59.9,158.3,59.9z M114.6,59.9H85.4V45.4
-            h29.1V59.9z" />
-          </svg>
-        </a>
-        <a class="links__no-underline" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7C25B0">
-          <h4 class="typography__orange-h4 mb-3">
-            Career Workshops
-          </h4>
-          <h5 class="typography__h5">
-            Job seekers can find courses related to resumes, job search, interviewing and&nbsp;more.
-          </h5>
-        </a>
-        <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7C25B0" class="btn btn-primary">
-          See Courses
-        </a>
-      </div> -->
-      <!-- End Career Workshops -->
-      {% endcomment %}
-
-      <!-- DIP -->
-      <div class="col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
-        <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7887E8">
-          <svg xmlns="http://www.w3.org/2000/svg" height="150" width="150" viewbox="0 0 200 200" xml:space="preserve">
-          <path class="svg--none" d="M5.3,5.3h189.3v189.3H5.3V5.3z" />
-          <path class="svg--blue" d="M154.6,44.9c-1.6-4.7-6-8-11.2-8H56.6c-5.2,0-9.5,3.3-11.2,8L29,92.1v63.1c0,4.3,3.5,7.9,7.9,7.9h7.9c4.3,0,7.9-3.5,7.9-7.9
-            v-7.9h94.7v7.9c0,4.3,3.5,7.9,7.9,7.9h7.9c4.3,0,7.9-3.5,7.9-7.9V92.1L154.6,44.9z M56.6,123.7c-6.5,0-11.8-5.3-11.8-11.8
-            S50.1,100,56.6,100s11.8,5.3,11.8,11.8S63.2,123.7,56.6,123.7z M143.4,123.7c-6.5,0-11.8-5.3-11.8-11.8s5.3-11.8,11.8-11.8
-            c6.5,0,11.8,5.3,11.8,11.8S149.9,123.7,143.4,123.7z M44.8,84.2l11.8-35.5h86.8l11.8,35.5H44.8z" />
-          </svg>
-        </a>
-        <a class="links__no-underline" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7887E8">
-          <h4 class="typography__orange-h4 mb-3">
-            Driver Improvement Program
-          </h4>
-          <h5 class="typography__h5">
-            This National Safety Council Defensive Driving Course (DDC-4) 
-            offers participants the opportunity to keep minor traffic
-            violations off their driving records. Some insurance companies 
-            offer premium discounts to those who complete a DDC-4 course.
-          </h5>
-        </a>
-        <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7887E8" class="btn btn-primary">
-          View Classes
-        </a>
-      </div><!-- End DIP -->
-
-      <!-- Highway Construction -->
-      <div class="col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
-        <a href="./hcctp/">
-          <svg xmlns="http://www.w3.org/2000/svg" height="150" width="150" viewbox="0 0 200 200" xml:space="preserve">
-            <rect class="svg--none" x="10.5" y="10.5" width="179" height="179" />
-            <rect class="svg--blue" x="129" y="92" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -54.933 139.8479)" width="24.6" height="88.4" />
-            <path class="svg--blue" d="M145.2,84.5c15.9,0,28.7-12.9,28.7-28.7c0-4.8-1.3-9.2-3.4-13.1l-22.2,22.2l-12.2-12.2l22.2-22.2
-              c-3.9-2.1-8.4-3.4-13.1-3.4c-15.9,0-28.7,12.9-28.7,28.7c0,3.4,0.7,6.6,1.7,9.5L103,80.5L88.3,65.8l5.8-5.8L82.6,48.4L100,31
-              c-9.6-9.6-25.2-9.6-34.8,0L36.1,60.1l11.6,11.6H24.5l-5.8,5.8l29.1,29.1l5.8-5.8V77.5l11.6,11.6l5.8-5.8l14.6,14.6l-60.9,60.9
-              l17.4,17.4l93.5-93.4C138.6,83.8,141.8,84.5,145.2,84.5z" />
-          </svg>
-        </a>
-        <a class="links__no-underline" href="./hcctp/">
-          <h4 class="typography__orange-h4 mb-3">
-            Highway Construction
-          </h4>
-          <h5 class="typography__h5">
-            This tuition-free, 12-week program is designed to provide qualified 
-            individuals with training in highway construction&nbsp;careers.
-          </h5>
-        </a>
-        <a href="./hcctp/" class="btn btn-primary">
-          Learn More
-        </a>
-      </div><!-- End Highway Construction -->
-
-      <!-- Online Training -->
-      <div class="col-lg-4 text-center mb-5 d-flex flex-column align-items-center justify-content-between">
-        <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF772088">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" height="150px" width="150px" xml:space="preserve">
-            <path class="svg--none" d="M0,0h200v200H0V0z" />
-            <path class="svg--blue" d="M183.42,92.49l-37.92-0.08c-4.17,0-7.58,3.41-7.58,7.58v68.25c0,4.17,3.41,7.58,7.58,7.58h37.92c4.17,0,7.58-3.41,7.58-7.58 V100C191,95.83,187.59,92.49,183.42,92.49z M183.42,160.67H145.5v-53.08h37.92V160.67z" />
-            <path class="svg--blue" d="M160.67,24.17H24.17C15.75,24.17,9,30.92,9,39.33v91c0,8.34,6.75,15.17,15.17,15.17h53.08v15.17H62.08v15.17h60.67v-15.17 h-15.17V145.5h15.17v-15.17H24.17v-91h136.5v37.92h15.17V39.33C175.83,30.92,169.01,24.17,160.67,24.17z" />
-            <polygon class="svg--blue" stroke="black" points="99.77,77.25 92.42,54.5 85.06,77.25 62.08,77.25 80.81,90.6 73.68,112.67 92.41,99.02 111.14,112.67 104.01,90.6 122.74,77.25 " />
-          </svg>
-        </a>
-        <a class="links__no-underline" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF772088">
-          <h4 class="typography__orange-h4 mb-3">
-            Online Training
-          </h4>
-          <h5 class="typography__h5">
-            Are you looking for an opportunity to enrich yourself from home? Do you want to
-            enhance your career skills, earn CEUs for continuing education, develop new
-            hobbies, or improve your overall well-being? Check out our wide variety of online
-            training options through Ed2Go and&nbsp;CareerStep.
-          </h5>
-        </a>
-        <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF772088" class="btn btn-primary">
-          Browse Classes
-        </a>
-      </div><!-- End Online Training -->
-
-    </div>
-  </div>
 
   {% include testimonials.html %}
+
+  
   <div class="container">
     <div class="row">
-      <div class="col-12 margins__col--top home__col--heading-underline">
-        <h3 class="typography__section--heading margins__heading--btm">Become an Instructor</h3>
-      </div>
-      <div class="col-md-6 d-flex flex-column justify-content-around editable">
+      <div class="col mt-3 editable">
         <p>
-          Continuing Education instructors provide excellent teaching and learning opportunities for the community.
-          KCC&rsquo;s Continuing Education &amp; Business Partnerships Office continues to search for competent
-          instructors wanting to teach short-term professional seminars and community education workshops, day or
-          evening and on-campus or virtual.
+          Register using links here, or contact our office.
         </p>
-        <p><strong>You can make a difference in helping fulfill the lifelong learning needs of our community.</strong></p>
       </div>
-      <div class="col-md-6">
-        <div class="mt-md-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="editable">
-                <p><strong>Do you have a special skill or talent that you would like to share with the community?</strong></p>
-                <p>If you have an area of expertise and a true dedication and love for teaching, please complete the form and submit it. If your course is determined to fit our current needs, we will contact you to discuss the next steps in hiring you and scheduling the class.</p>
-                <p class="text-center">
-                  <button id="modalButton" role="button" data-bs-target="#formModal" data-bs-toggle="modal" class="btn btn-primary">
-                    Complete the Form
-                  </button>
-                </p>
-              </div>
-            </div>
-          </div>
+    </div>
+    <div class="row">
+      <div class="col mt-2 section__heading-underline">
+        <h3 class="typography__section--heading margins__heading--btm" id="contact">Contact Us</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="editable">
+          <p>
+            Monday – Friday, 8 a.m. - 5 p.m.<br>
+            <a href="tel:+18158028202">(815) 802-8202</a><br>
+            <a href="mailto:continuinged@kcc.edu">continuinged@kcc.edu</a>
+          </p>
         </div>
       </div>
     </div>
   </div>
-  <!-- Modal -->
-  <div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" aria-modal="true" aria-labelledby="formModalLabel" aria-hidden="true" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="formModalLabel">KCC&nbsp;Continuing&nbsp;Education&nbsp;Instructor Inquiry&nbsp;Form</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="editable">
-            <p>Open form in new window/tab:
-              <a href="https://form.jotform.com/202296570720049" class="links__launch" target="_blank" rel="noopener noreferrer">
-                https://form.jotform.com/202296570720049
-              </a>
-            </p>
-          </div>
-          <iframe
-            id="JotFormIFrame-202296570720049"
-            title="Become a KCC Continuing Education Instructor"
-            onload="window.parent.scrollTo(0,0)"
-            allowtransparency="true"
-            allow="geolocation; microphone; camera; fullscreen"
-            src="https://form.jotform.com/202296570720049"
-            frameborder="0"
-            style="min-width:100%;max-width:100%;height:539px;border:none;"
-            scrolling="no"
-          >
-          </iframe>
-          <script src='https://form.jotform.com/s/umd/latest/for-form-embed-handler.js'></script>
-          <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-202296570720049'", "https://form.jotform.com/")</script>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div><!-- End modal -->
-  {% include contacts.html %}
 </main>

@@ -9,3 +9,48 @@
   filter: drop-shadow(3px 3px 10px rgba(126, 126, 126, .45));
   border: 3px solid $primary-blue;
 }
+
+.img__wrapper--relative {
+  position: relative;
+}
+
+.img__wrapper--heading {
+  bottom: 1rem;
+  left: .75rem;
+  position: absolute;
+  right: .75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .img__wrapper--heading {
+    bottom: 4rem;
+  }
+}
+
+.img__wrapper--buttons {
+  position: absolute;
+  bottom: .5rem;
+  left: 1rem;
+  right: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .img__wrapper--buttons {
+    left: 3rem;
+    right: 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .img__wrapper--buttons {
+      left: 5rem;
+      right: 5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+  .img__wrapper--buttons {
+    left: 10rem;
+    right: 10rem;
+  }
+}
