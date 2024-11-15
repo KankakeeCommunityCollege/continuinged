@@ -1,8 +1,10 @@
 ---
-accordion_page: Non-credit Workforce Training
+accordion_page: Customized Workforce Training
 card_heading: 'Health Careers'
 order: 1
 ---
+KCC is an approved provider by the Illinois Department of Financial and Professional
+Regulation for continuing education units in all of these professional&nbsp;areas:
 
 * Nursing
 * Social Work

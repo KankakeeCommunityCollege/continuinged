@@ -1,5 +1,5 @@
 ---
-accordion_page: Non-credit Workforce Training
+accordion_page: Customized Workforce Training
 card_heading: 'Safety & OSHA'
 order: 3
 ---
