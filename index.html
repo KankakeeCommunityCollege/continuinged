@@ -18,22 +18,27 @@ main_banner_border: true
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        {% assign first_char = page.main_banner_image | slice: 0 %}
-        {% if first_char == '/' %}
-          {% assign banner = page.main_banner_image | remove_first: '/' %}
-        {% else %}
-          {% assign banner = page.main_banner_image %}
-        {% endif %}
-        {% if page.main_banner_link_url and page.main_banner_link_url != '#' %}
-        <a href="{{ page.main_banner_link_url }}"{% if page.main_banner_link_title %} title="{{ page.main_banner_link_title }}"{% endif %}>
-        {% endif %}
-        <img
-          src="{{ page.baseurl }}{{ banner }}"
-          class="img-fluid w-100{% if page.main_banner_border %} border{% endif %}"
-          alt="{{ page.main_banner_alt_text | replace: '"', '&quot;' }}">
-        {% if page.main_banner_link_url and page.main_banner_link_url != '#' %}
-        </a>
-        {% endif %}
+        <div class="img__wrapper--relative">
+          <h2 class="typography__banner-heading img__wrapper--heading">Career Advancement &bull; Skill Building &bull; Personal&nbsp;Growth</h2>
+          <div class="d-none d-md-flex img__wrapper--buttons">
+            <a href="./workforce-training/" class="btn buttons__action buttons__action--width-auto flex-fill">Get Customized training</a>
+            <a href="https://www.enrole.com/kcc/jsp/index.jsp" class="btn buttons__action buttons__action--width-auto flex-fill">Explore Classes</a>
+          </div>
+          {% assign first_char = page.main_banner_image | slice: 0 %}
+          {% if first_char == '/' %}
+            {% assign banner = page.main_banner_image | remove_first: '/' %}
+          {% else %}
+            {% assign banner = page.main_banner_image %}
+          {% endif %}
+          <img
+            src="{{ page.baseurl }}{{ banner }}"
+            class="img-fluid w-100{% if page.main_banner_border %} border{% endif %}"
+            alt="{{ page.main_banner_alt_text | replace: '"', '&quot;' }}">
+        </div>
+        <div class="d-flex d-md-none flex-column">
+            <a href="./workforce-training/" class="btn buttons__action mt-2 flex-fill">Get Customized training</a>
+            <a href="https://www.enrole.com/kcc/jsp/index.jsp" class="btn buttons__action mt-2 flex-fill">Explore Classes</a>
+          </div>
       </div>
     </div>
   </div>
