@@ -5,6 +5,8 @@ title: About
 description: >-
   Offering non-credit training to people and businesses of the community.
   Online, in-person and customized options available.
+banner_image: assets/img/cebp-logo_red-blue.png
+banner_alt_text: Kankakee Community College Continuing Education and Business Partnerships
 ---
 
 <!-- Build -->
@@ -12,6 +14,18 @@ description: >-
   <div class="container">
     <div class="row">
       <div class="col-12">
+        <div class="text-center">
+          {% assign first_char = page.banner_image | slice: 0 %}
+          {% if first_char == '/' %}
+            {% assign banner = page.banner_image | remove_first: '/' %}
+          {% else %}
+            {% assign banner = page.banner_image %}
+          {% endif %}
+          <img
+            src="{{ page.baseurl }}{{ banner }}"
+            class="img-fluid"
+            alt="{{ page.banner_alt_text | replace: '"', '&quot;' }}">
+        </div>
         <div class="editable">
           <h2 class="typography__h2">About Us</h2>
           <p>
