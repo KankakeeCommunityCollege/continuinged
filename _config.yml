@@ -71,6 +71,10 @@ exclude:
 
 uploads_dir: "uploads/" # specifies the default uploads directory for CloudCannon
 
+_inputs:
+  no_main_call_to_action: # Disable visit & apply buttons with `page.no_main_call_to_action: true`
+    hidden: true # Hide this setting so that editors can't accidentally change it
+
 _comments:
   layout: Do NOT modify layouts. It may break things.
   baseurl: Do NOT modify baseurl. It WILL break all page links.
