@@ -8,7 +8,6 @@ theme: "kcc-gem-theme"
 port: 3000
 core_site: false
 theme_config: false
-# BUILD
 timezone: America/Chicago
 google-tag_key: GTM-TNVWT2L
 nav_config:
