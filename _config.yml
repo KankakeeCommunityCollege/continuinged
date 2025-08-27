@@ -3,6 +3,7 @@ site_name: Continuing Education
 public-url: "https://www.kcc.edu"
 url: "https://www.kcc.edu/continuinged"
 canonical_baseurl: https://www.kcc.edu/continuinged
+sitemap_baseurl: https://www.kcc.edu/continuinged # Used to prefix the page URLs in sitemap.xml
 subsection_title: "KCC Continuing Education"
 theme: "kcc-gem-theme"
 port: 3000
