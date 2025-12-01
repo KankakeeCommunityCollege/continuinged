@@ -14,10 +14,6 @@ google-tag_key: GTM-TNVWT2L
 nav_config:
   smaller_brand: true
 nav_links:
-  - link_text: Class Schedule
-    link_href: https://cdn.kcc.edu/continuinged/mailers/cont-ed-mailer.pdf
-    button: false
-    external: true
   - link_text: Facilities
     link_href: facilities
     button: false
