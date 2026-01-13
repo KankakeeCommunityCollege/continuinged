@@ -7,32 +7,57 @@ description: >-
   KCC Continuing Education & Career Services has flexible, convenient and
   cost-effective training. Career skills, computers personal enrichment, and
   lifelong learning.
-main_banner_image: assets/img/continuinged-banner_z91_8067.jpg
-main_banner_alt_text: 8 people in the KCC courtyard
-main_banner_link_url:
-main_banner_link_title: Customized Workforce Training
+main_banner_image: uploads/homepage-banner_ai-cover_spring-2026.jpg
+main_banner_alt_text: 'A vibrant, 3D glass-like block featuring the letters "AI" resting on a colorful digital circuit board.'
 main_banner_border: true
+main_banner_heading: 'Career Advancement &bull; Skill Building &bull; Personal&nbsp;Growth'
+main_banner_buttons:
+  - button_text: "Get Customized Training"
+    button_link: "./workforce-training/"
+  - button_text: "Explore Classes"
+    button_link: "https://www.enrole.com/kcc/jsp/index.jsp"
+main_banner_bottom_caption:
 no_main_call_to_action: true
+_inputs:
+  main_banner_bottom_caption:
+    type: text
+    comment: Add an optional caption under the main banner image
+  main_banner_alt_text:
+    type: text
+    comment: Do not leave blank! An alternative text description is required for WCAG 2.1 AA conformance.
+  main_banner_border:
+    type: checkbox
+    comment: Check to add a thin border around the main banner (add to light colored images)
+  main_banner_heading:
+    type: text
+    comment: Add a short heading to superimpose on the main banner.
+  main_banner_buttons:
+    comment: Superimpose large buttons on the main banner. Limit to 2 to maintain layout.
 ---
 <main id="content">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
         <div class="img__wrapper--relative">
-          <h2 class="typography__banner-heading img__wrapper--heading typography__text-shadow">Career Advancement &bull; Skill Building &bull; Personal&nbsp;Growth</h2>
+          {% if page.main_banner_heading and page.main_banner_heading != '' %}<h2 class="typography__banner-heading img__wrapper--heading typography__text-shadow">{{ page.main_banner_heading }}</h2>{% endif %}
+          {% if page.main_banner_buttons and page.main_banner_buttons.size > 0 %}
           <div class="d-none d-md-flex img__wrapper--buttons">
-            <a href="./workforce-training/" class="btn buttons__action buttons__action--width-auto flex-fill">Get Customized Training</a>
-            <a href="https://www.enrole.com/kcc/jsp/index.jsp" class="btn buttons__action buttons__action--width-auto flex-fill">Explore Classes</a>
+          {% for button in page.main_banner_buttons %}
+            <a href="{{ button.button_link }}" class="btn buttons__action buttons__action--width-auto flex-fill">{{ button.button_text }}</a>
+          {% endfor %}
           </div>
+          {% endif %}
           {% assign first_char = page.main_banner_image | slice: 0 %}
           {% if first_char == '/' %}
             {% assign banner = page.main_banner_image | remove_first: '/' %}
           {% else %}
             {% assign banner = page.main_banner_image %}
           {% endif %}
-          <img src="{{ page.baseurl }}{{ banner }}" class="img-fluid w-100{% if page.main_banner_border %} border{% endif %}" alt="{{ page.main_banner_alt_text | replace: '"', '"' }}" />
+          <img src="{{ page.baseurl }}{{ banner }}" class="img-fluid w-100{% if page.main_banner_border %} border{% endif %}" alt="{{ page.main_banner_alt_text | replace: '"', '&quot;' }}" />
         </div>
-        <p class="mb-0 text-center text-md-end">Above: Lifelong Learning Institute - Curiosity Never Retires.</p>
+        {% if page.main_banner_bottom_caption and page.main_banner_bottom_caption != '' %}
+        <p class="mb-0 text-center text-md-end">{{ page.main_banner_bottom_caption }}</p>
+        {% endif %}
         <div class="d-flex d-md-none flex-column">
           <a href="./workforce-training/" class="btn buttons__action mt-2 flex-fill">Get Customized Training</a>
           <a href="https://www.enrole.com/kcc/jsp/index.jsp" class="btn buttons__action mt-2 flex-fill">Explore Classes</a>
