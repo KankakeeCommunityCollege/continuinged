@@ -1,0 +1,19 @@
+##############################
+##     Pa11y CI results     ##
+##############################
+
+##     Running Pa11y CI:
+##         DATETIME: 2026-02-09T16_15_41
+##         SITEMAP:  https://www.kcc.edu/continuinged/pa11y-ci-sitemap.xml?id=2
+
+
+Running Pa11y on 7 URLs:
+ > https://www.kcc.edu/continuinged/404.html#please-open-all-accordions - 0 errors
+ > https://www.kcc.edu/continuinged/about/#please-open-all-accordions - 0 errors
+ > https://www.kcc.edu/continuinged/comptia-certifications/#please-open-all-accordions - 0 errors
+ > https://www.kcc.edu/continuinged/facilities/#please-open-all-accordions - 0 errors
+ > https://www.kcc.edu/continuinged/hcctp/#please-open-all-accordions - 0 errors
+ > https://www.kcc.edu/continuinged/#please-open-all-accordions - 0 errors
+ > https://www.kcc.edu/continuinged/workforce-training/#please-open-all-accordions - 0 errors
+
+✔ 7/7 URLs passed
