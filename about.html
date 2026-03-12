@@ -21,10 +21,7 @@ no_main_call_to_action: true
           {% else %}
             {% assign banner = page.banner_image %}
           {% endif %}
-          <img
-            src="{{ page.baseurl }}{{ banner }}"
-            class="img-fluid"
-            alt="{{ page.banner_alt_text | replace: '"', '&quot;' }}">
+          <img src="{{ page.baseurl }}{{ banner }}" class="img-fluid" alt="{{ page.banner_alt_text | replace: '"', '"' }}" />
         </div>
         <div class="editable">
 	<h2 class="typography__h2">About Us</h2>
@@ -65,22 +62,22 @@ no_main_call_to_action: true
         </div>
       </div>
       <div class="col-md-6 d-flex flex-column justify-content-around editable">
-        <p>Continuing Education instructors provide excellent teaching and learning opportunities for the community. KCC’s Continuing Education & Business Partnerships Office continues to search for competent instructors wanting to teach short-term professional seminars and community education workshops, day or evening and on-campus or virtual.</p>
-        <p><strong>You can make a difference in helping fulfill the lifelong learning needs of our community.</strong></p>
-      </div>
+	<p>Continuing Education instructors provide excellent teaching and learning opportunities for the community. KCC’s Continuing Education &amp; Business Partnerships Office continues to search for competent instructors wanting to teach short-term professional seminars and community education workshops, day or evening and on-campus or virtual.</p>
+	<p><strong>You can make a difference in helping fulfill the lifelong learning needs of our community.</strong></p>
+</div>
       <div class="col-md-6">
         <div class="mt-md-4">
           <div class="card">
             <div class="card-body">
               <div class="editable">
-                <p><strong>Do you have a special skill or talent that you would like to share with the community?</strong></p>
-                <p>If you have an area of expertise and a true dedication and love for teaching, please complete the form and submit it. If your course is determined to fit our current needs, we will contact you to discuss the next steps in hiring you and scheduling the class.</p>
-                <p class="text-center">
-                  <button id="modalButton" role="button" data-bs-target="#formModal" data-bs-toggle="modal" class="btn btn-primary">
-                    Complete the Form
-                  </button>
-                </p>
-              </div>
+	<p><strong>Share your expertise with the community!</strong> </p>
+	<p>We are looking for experts dedicated to helping others learn and grow. If your expertise aligns with our current community needs, we’ll be in touch to discuss the next steps for hiring and scheduling your class.</p>
+	<p class="text-center"> </p>
+	<p><button id="modalButton" role="button" data-bs-target="#formModal" data-bs-toggle="modal" class="btn btn-primary">
+			Complete the Form
+		</button> </p>
+	<p></p>
+</div>
             </div>
           </div>
         </div>
