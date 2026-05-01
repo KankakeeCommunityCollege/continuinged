@@ -35,7 +35,8 @@
     "browserslist": "npx browserslist@latest --update-db",
     "test:pa11y": "bash pa11y.sh",
     "test:pa11y-ci": "bash pa11y-ci.sh",
-    "test:pa11y-ci-log": "bash pa11y-ci.sh -o"
+    "test:pa11y-ci-log": "bash pa11y-ci.sh -o",
+    "test:js-unit": "node ./assets/js/tests/testSwitchOnMayFourth.js"
   },
   "author": "https://github.com/wdzajicek",
   "license": "ISC",

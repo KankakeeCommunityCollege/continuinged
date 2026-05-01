@@ -8,12 +8,32 @@ description: >-
   into the highway construction and related trades.
 no_main_call_to_action: true
 keywords:
-jotform_id: '212235426653048'
+disable_jotform_sign_up: false
+jotform_inquiry_form_id: '212235426653048'
+jotform_sign_up_form_id: '261204829131955'
 program_main_image:
   src: uploads/kcc-hcctp-logos.jpg
   alt: Kankakee Community College Highway Construction Career Training Program
   height: 533
   width: 1000
+_inputs:
+  disable_jotform_sign_up:
+    type: switch
+    label: Disable Signup Form
+    comment: Turn off the HCCTP signup form when seats are full
+    context:
+      open: true
+      title: Help
+      icon: help
+      content: >-
+        Toggle this ON to allow the sign-up form to go live on its scheduled date (May 4).
+        Toggle OFF to manually force the general inquiry form to show (e.g., if registration is full).
+  jotform_inquiry_form_id:
+    type: text
+    label: Jotform ID for the general inquiry HCCTP form
+  jotform_sign_up_form_id:
+    type: text
+    label: Jotform ID for the sign-up HCCTP form
 ---
 <main id="content">
   <div class="container">
