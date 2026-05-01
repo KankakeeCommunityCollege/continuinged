@@ -1,1 +1,16 @@
-<script type="text/javascript" src="https://form.jotform.com/jsform/{{ page.jotform_id }}"></script>
+<div
+  id="LoadJotForm"
+  data-form-disable-sign-up="{{ page.disable_jotform_sign_up }}"
+  data-form-inquiry="{{ page.jotform_inquiry_form_id }}"
+  data-form-sign-up="{{ page.jotform_sign_up_form_id }}"
+>
+  <div class="text-center my-5 py-5">
+    <img
+      src="{{ page.baseurl }}assets/img/loader.min.svg"
+      class="img-fluid loader loader--animate"
+      height="75"
+      width="75"
+      alt="Loading..."
+    >
+  </div>
+</div>
