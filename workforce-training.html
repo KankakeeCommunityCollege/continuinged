@@ -13,60 +13,58 @@ banner_image_alt: >-
   professional in a conference room.
 accordion_expanded: false
 ---
-<main id="content">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        {% comment %}
-        <div class="text-center">
-          {% assign first_char = page.banner_image | slice: 0 %}
-          {% if first_char == '/' %}
-            {% assign banner = page.banner_image | remove_first: '/' %}
-          {% else %}
-            {% assign banner = page.banner_image %}
-          {% endif %}
-          <img src="{{ page.baseurl }}{{ banner }}" class="img-fluid" alt="{{ page.banner_image_alt | replace: '"', '"' }}" />
-        </div>
-        {% endcomment %}
-        <div class="text-center">
-          <img
-            src="{{ page.baseurl }}uploads/bee-il_trio_thrive_about-bee.jpg"
-            class="img-fluid"
-            height="800"
-            width="800"
-            alt="Ready to help your business thrive! Proud partner Behind Every Employer Illinois. Powered by: ICCB"
-          >
-        </div>
-        <h2 class="typography__h2">{{ page.title }}</h2>
-        <div class="editable">
-          <p>
-            The Continuing Education & Business Partnerships Department offers non-credit
-            workforce training to meet business needs, connecting employers with skilled
-            instructors. Customized solutions are also offered. Financial assistance is
-            available for qualifying training programs.
-          </p>
-        </div>
-        <div class="text-center mb-3">
-          <a class="btn btn-primary" href="#JotFormIFrame-252174478409060">
-            Request Information
-          </a>
-        </div>
-        {% include accordion.html %}
-        <iframe
-          id="JotFormIFrame-252174478409060"
-          title="Business Intake Form"
-          onload="window.parent.scrollTo(0,0)"
-          allowtransparency="true"
-          allow="geolocation; microphone; camera; fullscreen; payment"
-          src="https://form.jotform.com/252174478409060"
-          frameborder="0"
-          style="min-width:100%;max-width:100%;height:539px;border:none;"
-          scrolling="no"
-        >
-        </iframe>
-        <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-        <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252174478409060']", "https://form.jotform.com/")</script>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      {% comment %}
+      <div class="text-center">
+        {% assign first_char = page.banner_image | slice: 0 %}
+        {% if first_char == '/' %}
+          {% assign banner = page.banner_image | remove_first: '/' %}
+        {% else %}
+          {% assign banner = page.banner_image %}
+        {% endif %}
+        <img src="{{ page.baseurl }}{{ banner }}" class="img-fluid" alt="{{ page.banner_image_alt | replace: '"', '"' }}" />
       </div>
+      {% endcomment %}
+      <div class="text-center">
+        <img
+          src="{{ page.baseurl }}uploads/bee-il_trio_thrive_about-bee.jpg"
+          class="img-fluid"
+          height="800"
+          width="800"
+          alt="Ready to help your business thrive! Proud partner Behind Every Employer Illinois. Powered by: ICCB"
+        >
+      </div>
+      <h1 class="typography__h1">{{ page.title }}</h1>
+      <div class="editable">
+        <p>
+          The Continuing Education & Business Partnerships Department offers non-credit
+          workforce training to meet business needs, connecting employers with skilled
+          instructors. Customized solutions are also offered. Financial assistance is
+          available for qualifying training programs.
+        </p>
+      </div>
+      <div class="text-center mb-3">
+        <a class="btn btn-primary" href="#JotFormIFrame-252174478409060">
+          Request Information
+        </a>
+      </div>
+      {% include accordion.html %}
+      <iframe
+        id="JotFormIFrame-252174478409060"
+        title="Business Intake Form"
+        onload="window.parent.scrollTo(0,0)"
+        allowtransparency="true"
+        allow="geolocation; microphone; camera; fullscreen; payment"
+        src="https://form.jotform.com/252174478409060"
+        frameborder="0"
+        style="min-width:100%;max-width:100%;height:539px;border:none;"
+        scrolling="no"
+      >
+      </iframe>
+      <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+      <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252174478409060']", "https://form.jotform.com/")</script>
     </div>
   </div>
-</main>
+</div>
