@@ -9,112 +9,108 @@ banner_image: assets/img/cebp-logo_red-blue.png
 banner_alt_text: Kankakee Community College Continuing Education and Business Partnerships
 no_main_call_to_action: true
 ---
-<!-- Build -->
-<main id="content">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="text-center">
-          {% assign first_char = page.banner_image | slice: 0 %}
-          {% if first_char == '/' %}
-            {% assign banner = page.banner_image | remove_first: '/' %}
-          {% else %}
-            {% assign banner = page.banner_image %}
-          {% endif %}
-          <img src="{{ page.baseurl }}{{ banner }}" class="img-fluid" alt="{{ page.banner_alt_text | replace: '"', '"' }}" />
-        </div>
-        <div class="editable">
-	<h2 class="typography__h2">About Us</h2>
-	<p> The Continuing Education &amp; Business Partnerships Department at KCC strives to meet the unique needs of local businesses and individuals. We provide non-credit workforce training and personal development classes. Financial assistance is available for select workforce training programs. </p>
-	<h3 class="typography__h3">Course Areas</h3>
-	<ul>
-		<li>Computer Skills</li>
-		<li>Personal enrichment:
-			<ul>
-				<li>Art, Hobbies &amp; Home</li>
-				<li>Educational Talks</li>
-				<li>Lifelong Learning Institute</li>
-				<li>Travel Information</li>
-			</ul>
-		</li>
-		<li>Professional Development
-			<ul>
-				<li>Computer Skills</li>
-				<li>Education</li>
-				<li>Health Careers</li>
-				<li>Information Technology/CompTIA®</li>
-				<li>Leadership &amp; Management</li>
-				<li>Safety &amp; OSHA</li>
-				<li>Social Services</li>
-			</ul>
-		</li>
-	</ul>
-	<h3 class="typography__h3">Custom Training</h3>
-	<p> Another of our specialties is connecting employers with skilled instructors to deliver custom training programs that enhance employee growth and productivity. If you don't see what you need, we'll collaborate with you to <a href="https://www.kcc.edu/continuinged/workforce-training/" title="Customized workforce training">create a tailored training solution</a>. </p>
-	<p>Let us help you strengthen your workforce and achieve your personal goals!</p>
-	<h3 class="typography__h3">Online Opportunities</h3>
-	<p> Our online classes offer ultimate flexibility, allowing you to enroll and study from anywhere with an internet connection. Experience engaging lessons, quizzes, hands-on assignments, and interactive discussions led by expert instructors, including nationally recognized authors. Personal Development and career training are offered – including industry-recognized healthcare training programs in Medical Billing and Coding, Medical Transcription, Medical Administrative Assistant, and Pharmacy Technician. KCC partners with Ed2Go and CareerStep to offer these online&nbsp;programs. </p>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="text-center">
+        {% assign first_char = page.banner_image | slice: 0 %}
+        {% if first_char == '/' %}
+          {% assign banner = page.banner_image | remove_first: '/' %}
+        {% else %}
+          {% assign banner = page.banner_image %}
+        {% endif %}
+        <img src="{{ page.baseurl }}{{ banner }}" class="img-fluid" alt="{{ page.banner_alt_text | replace: '"', '"' }}" />
       </div>
-      <div class="col-12 mb-0 mt-3">
-        <div class="editable">
-          <h3 class="typography__h3">Become an Instructor</h3>
-        </div>
+      <div class="editable">
+<h1 class="typography__h1">About Us</h1>
+<p> The Continuing Education &amp; Business Partnerships Department at KCC strives to meet the unique needs of local businesses and individuals. We provide non-credit workforce training and personal development classes. Financial assistance is available for select workforce training programs. </p>
+<h2 class="typography__h2">Course Areas</h2>
+<ul>
+  <li>Computer Skills</li>
+  <li>Personal enrichment:
+    <ul>
+      <li>Art, Hobbies &amp; Home</li>
+      <li>Educational Talks</li>
+      <li>Lifelong Learning Institute</li>
+      <li>Travel Information</li>
+    </ul>
+  </li>
+  <li>Professional Development
+    <ul>
+      <li>Computer Skills</li>
+      <li>Education</li>
+      <li>Health Careers</li>
+      <li>Information Technology/CompTIA®</li>
+      <li>Leadership &amp; Management</li>
+      <li>Safety &amp; OSHA</li>
+      <li>Social Services</li>
+    </ul>
+  </li>
+</ul>
+<h2 class="typography__h2">Custom Training</h2>
+<p> Another of our specialties is connecting employers with skilled instructors to deliver custom training programs that enhance employee growth and productivity. If you don't see what you need, we'll collaborate with you to <a href="https://www.kcc.edu/continuinged/workforce-training/" title="Customized workforce training">create a tailored training solution</a>. </p>
+<p>Let us help you strengthen your workforce and achieve your personal goals!</p>
+<h2 class="typography__h2">Online Opportunities</h2>
+<p> Our online classes offer ultimate flexibility, allowing you to enroll and study from anywhere with an internet connection. Experience engaging lessons, quizzes, hands-on assignments, and interactive discussions led by expert instructors, including nationally recognized authors. Personal Development and career training are offered – including industry-recognized healthcare training programs in Medical Billing and Coding, Medical Transcription, Medical Administrative Assistant, and Pharmacy Technician. KCC partners with Ed2Go and CareerStep to offer these online&nbsp;programs. </p>
+</div>
+    </div>
+    <div class="col-12 mb-0 mt-3">
+      <div class="editable">
+        <h2 class="typography__h2">Become an Instructor</h2>
       </div>
-      <div class="col-md-6 d-flex flex-column justify-content-around editable">
-	<p>Continuing Education instructors provide excellent teaching and learning opportunities for the community. KCC’s Continuing Education &amp; Business Partnerships Office continues to search for competent instructors wanting to teach short-term professional seminars and community education workshops, day or evening and on-campus or virtual.</p>
-	<p><strong>You can make a difference in helping fulfill the lifelong learning needs of our community.</strong></p>
+    </div>
+    <div class="col-md-6 d-flex flex-column justify-content-around editable">
+<p>Continuing Education instructors provide excellent teaching and learning opportunities for the community. KCC’s Continuing Education &amp; Business Partnerships Office continues to search for competent instructors wanting to teach short-term professional seminars and community education workshops, day or evening and on-campus or virtual.</p>
+<p><strong>You can make a difference in helping fulfill the lifelong learning needs of our community.</strong></p>
 </div>
-      <div class="col-md-6">
-        <div class="mt-md-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="editable">
-	<p><strong>Share your expertise with the community!</strong> </p>
-	<p>We are looking for experts dedicated to helping others learn and grow. If your expertise aligns with our current community needs, we’ll be in touch to discuss the next steps for hiring and scheduling your class.</p>
-	<p class="text-center"> </p>
-	<p><button id="modalButton" role="button" data-bs-target="#formModal" data-bs-toggle="modal" class="btn btn-primary">
-      Share your expertise<span class="visually-hidden"> by filling out the instructor inquiry form</span>
-		</button> </p>
-	<p></p>
+    <div class="col-md-6">
+      <div class="mt-md-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="editable">
+<h3 class="typography__h6">Share your expertise with the community!</h3>
+<p>We are looking for experts dedicated to helping others learn and grow. If your expertise aligns with our current community needs, we’ll be in touch to discuss the next steps for hiring and scheduling your class.</p>
+<p class="text-center"> </p>
+<p><button id="modalButton" role="button" data-bs-target="#formModal" data-bs-toggle="modal" class="btn btn-primary">
+    Share your expertise<span class="visually-hidden"> by filling out the instructor inquiry form</span>
+  </button> </p>
+<p></p>
 </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Modal -->
-  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="formModal" aria-modal="true" aria-labelledby="formModalLabel" aria-hidden="true" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title h5" id="formModalLabel">KCC&nbsp;Continuing&nbsp;Education&nbsp;Instructor Inquiry&nbsp;Form</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://form.jotform.com/202296570720049"
-                class="links__launch"
-              >Open the <strong>Become a KCC Continuing Education Instructor</strong> form in new window</span></a>.
-            </p>
 </div>
-          <iframe id="JotFormIFrame-202296570720049" title="Become a KCC Continuing Education Instructor" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/202296570720049" frameborder="0" style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no">
-          </iframe>
-          <script src='https://form.jotform.com/s/umd/latest/for-form-embed-handler.js'></script>
-          <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-202296570720049'", "https://form.jotform.com/")</script>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
+
+<!-- Modal -->
+<div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="formModal" aria-modal="true" aria-labelledby="formModalLabel" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title h5" id="formModalLabel">KCC&nbsp;Continuing&nbsp;Education&nbsp;Instructor Inquiry&nbsp;Form</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <p>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://form.jotform.com/202296570720049"
+              class="links__launch"
+            >Open the <strong>Become a KCC Continuing Education Instructor</strong> form in new window</span></a>.
+          </p>
+</div>
+        <iframe id="JotFormIFrame-202296570720049" title="Become a KCC Continuing Education Instructor" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/202296570720049" frameborder="0" style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no">
+        </iframe>
+        <script src='https://form.jotform.com/s/umd/latest/for-form-embed-handler.js'></script>
+        <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-202296570720049'", "https://form.jotform.com/")</script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
-  </div><!-- End modal -->
-
-  {% include contacts.html %}
-</main>
+  </div>
+</div><!-- End modal -->
+{% include contacts.html section_heading_level="h2" name_heading_level="h3" %}
