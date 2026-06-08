@@ -38,147 +38,145 @@ _inputs:
   homepage:
     hidden: true
 ---
-<main id="content">
-  <div class="container">
-    <h1 class="visually-hidden">Continuing Education & Business Partnerships Homepage</h1>
-    <div class="row">
-      <div class="col-12 text-center">
-        <div class="img__wrapper--relative">
-          {% if page.main_banner_heading and page.main_banner_heading != '' %}<h2 class="typography__banner-heading img__wrapper--heading typography__text-shadow">{{ page.main_banner_heading }}</h2>{% endif %}
-          {% if page.main_banner_buttons and page.main_banner_buttons.size > 0 %}
-          <div class="d-none d-md-flex img__wrapper--buttons">
-          {% for button in page.main_banner_buttons %}
-            <a href="{{ button.button_link }}" class="btn buttons__action buttons__action--width-auto flex-fill">{{ button.button_text }}</a>
-          {% endfor %}
-          </div>
-          {% endif %}
-          {% assign first_char = page.main_banner_image | slice: 0 %}
-          {% if first_char == '/' %}
-            {% assign banner = page.main_banner_image | remove_first: '/' %}
-          {% else %}
-            {% assign banner = page.main_banner_image %}
-          {% endif %}
-          <img src="{{ page.baseurl }}{{ banner }}" class="img-fluid w-100{% if page.main_banner_border %} border{% endif %}" alt="{{ page.main_banner_alt_text | replace: '"', '&quot;' }}" />
+<div class="container">
+  <h1 class="visually-hidden">Continuing Education & Business Partnerships Homepage</h1>
+  <div class="row">
+    <div class="col-12 text-center">
+      <div class="img__wrapper--relative">
+        {% if page.main_banner_heading and page.main_banner_heading != '' %}<h2 class="typography__banner-heading img__wrapper--heading typography__text-shadow">{{ page.main_banner_heading }}</h2>{% endif %}
+        {% if page.main_banner_buttons and page.main_banner_buttons.size > 0 %}
+        <div class="d-none d-md-flex img__wrapper--buttons">
+        {% for button in page.main_banner_buttons %}
+          <a href="{{ button.button_link }}" class="btn buttons__action buttons__action--width-auto flex-fill">{{ button.button_text }}</a>
+        {% endfor %}
         </div>
-        {% if page.main_banner_bottom_caption and page.main_banner_bottom_caption != '' %}
-        <p class="mb-0 text-center text-md-end">{{ page.main_banner_bottom_caption }}</p>
         {% endif %}
-        <div class="d-flex d-md-none flex-column">
-          <a href="./workforce-training/" class="btn buttons__action mt-2 flex-fill">Get Customized Training</a>
-          <a href="https://www.enrole.com/kcc/jsp/index.jsp" class="btn buttons__action mt-2 flex-fill">Explore Classes</a>
-        </div>
+        {% assign first_char = page.main_banner_image | slice: 0 %}
+        {% if first_char == '/' %}
+          {% assign banner = page.main_banner_image | remove_first: '/' %}
+        {% else %}
+          {% assign banner = page.main_banner_image %}
+        {% endif %}
+        <img src="{{ page.baseurl }}{{ banner }}" class="img-fluid w-100{% if page.main_banner_border %} border{% endif %}" alt="{{ page.main_banner_alt_text | replace: '"', '&quot;' }}" />
+      </div>
+      {% if page.main_banner_bottom_caption and page.main_banner_bottom_caption != '' %}
+      <p class="mb-0 text-center text-md-end">{{ page.main_banner_bottom_caption }}</p>
+      {% endif %}
+      <div class="d-flex d-md-none flex-column">
+        <a href="./workforce-training/" class="btn buttons__action mt-2 flex-fill">Get Customized Training</a>
+        <a href="https://www.enrole.com/kcc/jsp/index.jsp" class="btn buttons__action mt-2 flex-fill">Explore Classes</a>
       </div>
     </div>
   </div>
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col margins__col--top section__heading-underline">
-          <h2 class="typography__section--heading margins__heading--btm">What We Offer</h2>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-4 col-md-6 d-flex mb-4">
-          <div class="card positioning--max-width-350">
-            <img src="{{ page.baseurl }}assets/img/professional-development_card-img.jpg" class="card-img-top" alt="3 professionals in front of a colorful background" />
-            <div class="card-body">
-              <h3 class="card-title h4">Professional Development</h3>
-              <p class="card-text">
-                Advance your career, earn professional development units, and learn from expert instructors&mdash;without the
-                hassle of city travel.
-              </p>
-              <p class="card-text">
-                <a class="btn btn-primary" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0">Find the right training</a>
-              </p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <a href="./workforce-training/">Customized Workforce Training</a>
-              </li>
-              <li class="list-group-item">
-                <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8">Computer Skills</a>
-              </li>
-              <li class="list-group-item">
-                <a href="./comptia-certifications/">Information Technology CompTIA<sup>&reg;</sup></a>
-              </li>
-              <li class="list-group-item">
-                <a href="./hcctp/">Highway Construction Careers Training&nbsp;Program</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex mb-4">
-          <div class="card positioning--max-width-350">
-            <img src="{{ page.baseurl }}uploads/lli-square.jpg" class="card-img-top" alt="4 people at an LLI event" />
-            <div class="card-body">
-              <h3 class="card-title">Personal Enrichment</h3>
-              <p class="card-text">
-                Develop a hobby, meet people with similar interests, and explore the latest trends. You'll have a good time!
-              </p>
-              <p class="card-text">
-                <a class="btn btn-primary" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808">Choose your classes</a>
-              </p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290">Lifelong Learning Institute</a>
-              </li>
-              <li class="list-group-item">
-                <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7887E8">Driver Improvement Program</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex mb-4">
-          <div class="card positioning--max-width-350">
-            <img src="{{ page.baseurl }}uploads/computer-skills_square.jpg" class="card-img-top" alt="Young person using a laptop" />
-            <div class="card-body">
-              <h3 class="card-title">Online Learning</h3>
-              <p class="card-text">
-                The options are endless! Enhance your career skills, earn CEUs for continuing education, develop new hobbies, or improve
-                your overall well-being.
-              </p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <a href="https://www.ed2go.com/kankakeecc/">Ed2Go</a>
-              </li>
-              <li class="list-group-item">
-                <a href="https://onlinetraining.kcc.edu/">Ed2go Career Training</a>
-              </li>
-              <li class="list-group-item">
-                <a href="https://www.careerstep.com/lp/partner/ap/kcc/">CareerStep</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  {% include testimonials.html %}
-
-  
+</div>
+<section>
   <div class="container">
     <div class="row">
-      <div class="col mt-3 editable">
-        <p>
-          Register using links here, or contact our office.
-        </p>
+      <div class="col margins__col--top section__heading-underline">
+        <h2 class="typography__section--heading margins__heading--btm">What We Offer</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col mt-2 section__heading-underline">
-        <h2 class="typography__section--heading margins__heading--btm" id="contact">Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6 d-flex mb-4">
+        <div class="card positioning--max-width-350">
+          <img src="{{ page.baseurl }}assets/img/professional-development_card-img.jpg" class="card-img-top" alt="3 professionals in front of a colorful background" />
+          <div class="card-body">
+            <h3 class="card-title h4">Professional Development</h3>
+            <p class="card-text">
+              Advance your career, earn professional development units, and learn from expert instructors&mdash;without the
+              hassle of city travel.
+            </p>
+            <p class="card-text">
+              <a class="btn btn-primary" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF6C5EA0">Find the right training</a>
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="./workforce-training/">Customized Workforce Training</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7BCBD8">Computer Skills</a>
+            </li>
+            <li class="list-group-item">
+              <a href="./comptia-certifications/">Information Technology CompTIA<sup>&reg;</sup></a>
+            </li>
+            <li class="list-group-item">
+              <a href="./hcctp/">Highway Construction Careers Training&nbsp;Program</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex mb-4">
+        <div class="card positioning--max-width-350">
+          <img src="{{ page.baseurl }}uploads/lli-square.jpg" class="card-img-top" alt="4 people at an LLI event" />
+          <div class="card-body">
+            <h3 class="card-title">Personal Enrichment</h3>
+            <p class="card-text">
+              Develop a hobby, meet people with similar interests, and explore the latest trends. You'll have a good time!
+            </p>
+            <p class="card-text">
+              <a class="btn btn-primary" href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF75E808">Choose your classes</a>
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF777290">Lifelong Learning Institute</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://www.enrole.com/kcc/jsp/index.jsp?categoryId=BF7887E8">Driver Improvement Program</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex mb-4">
+        <div class="card positioning--max-width-350">
+          <img src="{{ page.baseurl }}uploads/computer-skills_square.jpg" class="card-img-top" alt="Young person using a laptop" />
+          <div class="card-body">
+            <h3 class="card-title">Online Learning</h3>
+            <p class="card-text">
+              The options are endless! Enhance your career skills, earn CEUs for continuing education, develop new hobbies, or improve
+              your overall well-being.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://www.ed2go.com/kankakeecc/">Ed2Go</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://onlinetraining.kcc.edu/">Ed2go Career Training</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://www.careerstep.com/lp/partner/ap/kcc/">CareerStep</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <div class="editable">
-	<p> Monday – Friday, 8 a.m. - 5 p.m.<br /><a href="tel:+18158028206">815-802-8206</a><br /> <a href="mailto:continuinged@kcc.edu">continuinged@kcc.edu</a> </p>
-</div>
-      </div>
+
+  </div>
+</section>
+
+{% include testimonials.html %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col mt-3 editable">
+      <p>
+        Register using links here, or contact our office.
+      </p>
     </div>
   </div>
-</main>
+  <div class="row">
+    <div class="col mt-2 section__heading-underline">
+      <h2 class="typography__section--heading margins__heading--btm" id="contact">Contact Us</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="editable">
+<p> Monday – Friday, 8 a.m. - 5 p.m.<br /><a href="tel:+18158028206">815-802-8206</a><br /> <a href="mailto:continuinged@kcc.edu">continuinged@kcc.edu</a> </p>
+</div>
+    </div>
+  </div>
+</div>
